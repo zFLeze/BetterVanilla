@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "bettervanilla:block/fireproof_mangrove_slab"
+    },
+    "type=double": {
+      "model": "bettervanilla:block/fireproof_mangrove_planks"
+    },
+    "type=top": {
+      "model": "bettervanilla:block/fireproof_mangrove_slab_top"
+    }
+  }
+}

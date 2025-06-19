@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "bettervanilla:block/fireproof_dark_oak_planks",
+    "side": "bettervanilla:block/fireproof_dark_oak_planks",
+    "top": "bettervanilla:block/fireproof_dark_oak_planks"
+  }
+}

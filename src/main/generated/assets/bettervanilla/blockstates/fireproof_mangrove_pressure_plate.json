@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "bettervanilla:block/fireproof_mangrove_pressure_plate"
+    },
+    "powered=true": {
+      "model": "bettervanilla:block/fireproof_mangrove_pressure_plate_down"
+    }
+  }
+}

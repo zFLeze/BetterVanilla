@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "bettervanilla:block/fireproof_mangrove_planks"
+  }
+}

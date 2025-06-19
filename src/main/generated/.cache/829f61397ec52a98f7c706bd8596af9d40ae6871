@@ -1,0 +1,4 @@
+// 1.21.1	2025-06-19T21:49:14.7614096	Better Vanilla/Tags for minecraft:block
+8d2bdf61cfd92e50f2966f51553364ecc7b38abe data\minecraft\tags\block\fences.json
+eeb9d71d8a2b8bb8ffc9a103c4318009ca0c0350 data\minecraft\tags\block\fence_gates.json
+b7d4ccdaa9e0ea6ca8fb9b363e9103cc283d2571 data\minecraft\tags\block\mineable\axe.json

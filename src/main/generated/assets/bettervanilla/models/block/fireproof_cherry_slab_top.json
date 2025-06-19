@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "bettervanilla:block/fireproof_cherry_planks",
+    "side": "bettervanilla:block/fireproof_cherry_planks",
+    "top": "bettervanilla:block/fireproof_cherry_planks"
+  }
+}

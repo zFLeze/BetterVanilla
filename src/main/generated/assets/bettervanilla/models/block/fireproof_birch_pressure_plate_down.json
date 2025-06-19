@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_down",
+  "textures": {
+    "texture": "bettervanilla:block/fireproof_birch_planks"
+  }
+}

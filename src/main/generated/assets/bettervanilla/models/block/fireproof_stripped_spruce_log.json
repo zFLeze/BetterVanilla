@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "bettervanilla:block/fireproof_stripped_spruce_log_top",
+    "side": "bettervanilla:block/fireproof_stripped_spruce_log"
+  }
+}

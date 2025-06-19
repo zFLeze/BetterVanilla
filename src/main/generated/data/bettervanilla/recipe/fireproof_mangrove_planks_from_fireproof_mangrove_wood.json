@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "bettervanilla:fireproof_mangrove_wood"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "bettervanilla:fireproof_mangrove_planks"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "bettervanilla:block/fireproof_jungle_planks"
+  }
+}

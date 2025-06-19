@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "bettervanilla:block/fireproof_jungle_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "bettervanilla:block/fireproof_jungle_log"
+    },
+    "axis=z": {
+      "model": "bettervanilla:block/fireproof_jungle_log_horizontal",
+      "x": 90
+    }
+  }
+}

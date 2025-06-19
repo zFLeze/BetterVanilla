@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "bettervanilla:block/fireproof_spruce_planks"
+  }
+}
