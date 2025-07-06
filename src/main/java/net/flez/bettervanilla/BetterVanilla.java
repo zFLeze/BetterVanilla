@@ -1,6 +1,9 @@
 package net.flez.bettervanilla;
 
 import net.flez.bettervanilla.block.ModBlocks;
+import net.flez.bettervanilla.block.entity.ModBlockEntities;
+import net.flez.bettervanilla.effect.ModEffects;
+import net.flez.bettervanilla.event.ModEvents;
 import net.flez.bettervanilla.item.ModItemGroups;
 import net.flez.bettervanilla.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -20,5 +23,8 @@ public class BetterVanilla implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroup();
+		ModEvents.registerEvents();
+		ModBlockEntities.registerBlockEntities();
+		ModEffects.registerEffects();
 	}
 }

@@ -23,8 +23,6 @@ public class ModLootableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.FIREPROOF_OAK_SLAB, slabDrops(ModBlocks.FIREPROOF_OAK_SLAB));
         addDrop(ModBlocks.FIREPROOF_OAK_FENCE);
         addDrop(ModBlocks.FIREPROOF_OAK_FENCE_GATE);
-        addDrop(ModBlocks.FIREPROOF_OAK_DOOR, doorDrops(ModBlocks.FIREPROOF_OAK_DOOR));
-        addDrop(ModBlocks.FIREPROOF_OAK_TRAPDOOR);
         addDrop(ModBlocks.FIREPROOF_OAK_PRESSURE_PLATE);
         addDrop(ModBlocks.FIREPROOF_OAK_BUTTON);
 
@@ -38,8 +36,6 @@ public class ModLootableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.FIREPROOF_SPRUCE_SLAB, slabDrops(ModBlocks.FIREPROOF_SPRUCE_SLAB));
         addDrop(ModBlocks.FIREPROOF_SPRUCE_FENCE);
         addDrop(ModBlocks.FIREPROOF_SPRUCE_FENCE_GATE);
-        addDrop(ModBlocks.FIREPROOF_SPRUCE_DOOR, doorDrops(ModBlocks.FIREPROOF_SPRUCE_DOOR));
-        addDrop(ModBlocks.FIREPROOF_SPRUCE_TRAPDOOR);
         addDrop(ModBlocks.FIREPROOF_SPRUCE_PRESSURE_PLATE);
         addDrop(ModBlocks.FIREPROOF_SPRUCE_BUTTON);
 
@@ -53,8 +49,6 @@ public class ModLootableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.FIREPROOF_DARK_OAK_SLAB, slabDrops(ModBlocks.FIREPROOF_DARK_OAK_SLAB));
         addDrop(ModBlocks.FIREPROOF_DARK_OAK_FENCE);
         addDrop(ModBlocks.FIREPROOF_DARK_OAK_FENCE_GATE);
-        addDrop(ModBlocks.FIREPROOF_DARK_OAK_DOOR, doorDrops(ModBlocks.FIREPROOF_DARK_OAK_DOOR));
-        addDrop(ModBlocks.FIREPROOF_DARK_OAK_TRAPDOOR);
         addDrop(ModBlocks.FIREPROOF_DARK_OAK_PRESSURE_PLATE);
         addDrop(ModBlocks.FIREPROOF_DARK_OAK_BUTTON);
 
@@ -68,8 +62,6 @@ public class ModLootableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.FIREPROOF_BIRCH_SLAB, slabDrops(ModBlocks.FIREPROOF_BIRCH_SLAB));
         addDrop(ModBlocks.FIREPROOF_BIRCH_FENCE);
         addDrop(ModBlocks.FIREPROOF_BIRCH_FENCE_GATE);
-        addDrop(ModBlocks.FIREPROOF_BIRCH_DOOR, doorDrops(ModBlocks.FIREPROOF_BIRCH_DOOR));
-        addDrop(ModBlocks.FIREPROOF_BIRCH_TRAPDOOR);
         addDrop(ModBlocks.FIREPROOF_BIRCH_PRESSURE_PLATE);
         addDrop(ModBlocks.FIREPROOF_BIRCH_BUTTON);
 
@@ -82,8 +74,6 @@ public class ModLootableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.FIREPROOF_JUNGLE_SLAB, slabDrops(ModBlocks.FIREPROOF_JUNGLE_SLAB));
         addDrop(ModBlocks.FIREPROOF_JUNGLE_FENCE);
         addDrop(ModBlocks.FIREPROOF_JUNGLE_FENCE_GATE);
-        addDrop(ModBlocks.FIREPROOF_JUNGLE_DOOR, doorDrops(ModBlocks.FIREPROOF_JUNGLE_DOOR));
-        addDrop(ModBlocks.FIREPROOF_JUNGLE_TRAPDOOR);
         addDrop(ModBlocks.FIREPROOF_JUNGLE_PRESSURE_PLATE);
         addDrop(ModBlocks.FIREPROOF_JUNGLE_BUTTON);
 
@@ -97,8 +87,6 @@ public class ModLootableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.FIREPROOF_CHERRY_SLAB, slabDrops(ModBlocks.FIREPROOF_CHERRY_SLAB));
         addDrop(ModBlocks.FIREPROOF_CHERRY_FENCE);
         addDrop(ModBlocks.FIREPROOF_CHERRY_FENCE_GATE);
-        addDrop(ModBlocks.FIREPROOF_CHERRY_DOOR, doorDrops(ModBlocks.FIREPROOF_CHERRY_DOOR));
-        addDrop(ModBlocks.FIREPROOF_CHERRY_TRAPDOOR);
         addDrop(ModBlocks.FIREPROOF_CHERRY_PRESSURE_PLATE);
         addDrop(ModBlocks.FIREPROOF_CHERRY_BUTTON);
 
@@ -112,8 +100,6 @@ public class ModLootableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.FIREPROOF_MANGROVE_SLAB, slabDrops(ModBlocks.FIREPROOF_MANGROVE_SLAB));
         addDrop(ModBlocks.FIREPROOF_MANGROVE_FENCE);
         addDrop(ModBlocks.FIREPROOF_MANGROVE_FENCE_GATE);
-        addDrop(ModBlocks.FIREPROOF_MANGROVE_DOOR, doorDrops(ModBlocks.FIREPROOF_MANGROVE_DOOR));
-        addDrop(ModBlocks.FIREPROOF_MANGROVE_TRAPDOOR);
         addDrop(ModBlocks.FIREPROOF_MANGROVE_PRESSURE_PLATE);
         addDrop(ModBlocks.FIREPROOF_MANGROVE_BUTTON);
 
@@ -126,8 +112,6 @@ public class ModLootableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.FIREPROOF_BAMBOO_SLAB, slabDrops(ModBlocks.FIREPROOF_BAMBOO_SLAB));
         addDrop(ModBlocks.FIREPROOF_BAMBOO_FENCE);
         addDrop(ModBlocks.FIREPROOF_BAMBOO_FENCE_GATE);
-        addDrop(ModBlocks.FIREPROOF_BAMBOO_DOOR, doorDrops(ModBlocks.FIREPROOF_BAMBOO_DOOR));
-        addDrop(ModBlocks.FIREPROOF_BAMBOO_TRAPDOOR);
         addDrop(ModBlocks.FIREPROOF_BAMBOO_PRESSURE_PLATE);
         addDrop(ModBlocks.FIREPROOF_BAMBOO_BUTTON);
     }

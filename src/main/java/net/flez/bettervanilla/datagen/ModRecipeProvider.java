@@ -43,6 +43,63 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(RecipeExporter recipeExporter) {
+        //  CUSTOM  CRAFTING  RECIPE
+        //  COPPER SWORD
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.COPPER_SWORD)
+                .pattern(" C ")
+                .pattern(" C ")
+                .pattern(" S ")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter, Identifier.of("vanillaplus", "copper_sword"));
+
+        //  COPPER AXE
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.COPPER_AXE)
+                .pattern(" CC")
+                .pattern(" SC")
+                .pattern(" S ")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter, Identifier.of("vanillaplus", "copper_axe"));
+
+        //  COPPER PICKAXE
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_PICKAXE)
+                .pattern("CCC")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter, Identifier.of("vanillaplus", "copper_pickaxe"));
+
+        // COPPER SHOVEL
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_SHOVEL)
+                .pattern(" C ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter, Identifier.of("vanillaplus", "copper_shovel"));
+
+        //  COPPER HOE
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_HOE)
+                .pattern(" CC")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter, Identifier.of("vanillaplus", "copper_hoe"));
+
+
         //  Oxidized Copper Recipe
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_COPPER)
                 .pattern("III")
@@ -166,20 +223,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
                 .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_oak_slab"));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_OAK_DOOR, 1)
-                .input(Items.OAK_DOOR)
-                .input(Items.HONEYCOMB)
-                .criterion(hasItem(Items.OAK_DOOR), conditionsFromItem(Items.OAK_DOOR))
-                .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_oak_door"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_OAK_TRAPDOOR, 1)
-                .input(Items.OAK_TRAPDOOR)
-                .input(Items.HONEYCOMB)
-                .criterion(hasItem(Items.OAK_TRAPDOOR), conditionsFromItem(Items.OAK_TRAPDOOR))
-                .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_oak_trapdoor"));
-
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_OAK_FENCE, 1)
                 .input(Items.OAK_FENCE)
                 .input(Items.HONEYCOMB)
@@ -222,20 +265,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.SPRUCE_SLAB), conditionsFromItem(Items.SPRUCE_SLAB))
                 .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
                 .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_spruce_slab"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_SPRUCE_DOOR, 1)
-                .input(Items.SPRUCE_DOOR)
-                .input(Items.HONEYCOMB)
-                .criterion(hasItem(Items.SPRUCE_DOOR), conditionsFromItem(Items.SPRUCE_DOOR))
-                .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_spruce_door"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_SPRUCE_TRAPDOOR, 1)
-                .input(Items.SPRUCE_TRAPDOOR)
-                .input(Items.HONEYCOMB)
-                .criterion(hasItem(Items.SPRUCE_TRAPDOOR), conditionsFromItem(Items.SPRUCE_TRAPDOOR))
-                .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_spruce_trapdoor"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_SPRUCE_FENCE, 1)
                 .input(Items.SPRUCE_FENCE)
@@ -280,20 +309,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
                 .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_dark_oak_slab"));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_DARK_OAK_DOOR, 1)
-                .input(Items.DARK_OAK_DOOR)
-                .input(Items.HONEYCOMB)
-                .criterion(hasItem(Items.DARK_OAK_DOOR), conditionsFromItem(Items.DARK_OAK_DOOR))
-                .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_dark_oak_door"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_DARK_OAK_TRAPDOOR, 1)
-                .input(Items.DARK_OAK_TRAPDOOR)
-                .input(Items.HONEYCOMB)
-                .criterion(hasItem(Items.DARK_OAK_TRAPDOOR), conditionsFromItem(Items.DARK_OAK_TRAPDOOR))
-                .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_dark_oak_trapdoor"));
-
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_DARK_OAK_FENCE, 1)
                 .input(Items.DARK_OAK_FENCE)
                 .input(Items.HONEYCOMB)
@@ -336,20 +351,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.JUNGLE_SLAB), conditionsFromItem(Items.JUNGLE_SLAB))
                 .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
                 .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_jungle_slab"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_JUNGLE_DOOR, 1)
-                .input(Items.JUNGLE_DOOR)
-                .input(Items.HONEYCOMB)
-                .criterion(hasItem(Items.JUNGLE_DOOR), conditionsFromItem(Items.JUNGLE_DOOR))
-                .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_jungle_door"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_JUNGLE_TRAPDOOR, 1)
-                .input(Items.JUNGLE_TRAPDOOR)
-                .input(Items.HONEYCOMB)
-                .criterion(hasItem(Items.JUNGLE_TRAPDOOR), conditionsFromItem(Items.JUNGLE_TRAPDOOR))
-                .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_jungle_trapdoor"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_JUNGLE_FENCE, 1)
                 .input(Items.JUNGLE_FENCE)
@@ -394,20 +395,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
                 .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_acacia_slab"));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_ACACIA_DOOR, 1)
-                .input(Items.ACACIA_DOOR)
-                .input(Items.HONEYCOMB)
-                .criterion(hasItem(Items.ACACIA_DOOR), conditionsFromItem(Items.ACACIA_DOOR))
-                .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_acacia_door"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_ACACIA_TRAPDOOR, 1)
-                .input(Items.ACACIA_TRAPDOOR)
-                .input(Items.HONEYCOMB)
-                .criterion(hasItem(Items.ACACIA_TRAPDOOR), conditionsFromItem(Items.ACACIA_TRAPDOOR))
-                .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_acacia_trapdoor"));
-
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_ACACIA_FENCE, 1)
                 .input(Items.ACACIA_FENCE)
                 .input(Items.HONEYCOMB)
@@ -450,20 +437,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.BIRCH_SLAB), conditionsFromItem(Items.BIRCH_SLAB))
                 .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
                 .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_birch_slab"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_BIRCH_DOOR, 1)
-                .input(Items.BIRCH_DOOR)
-                .input(Items.HONEYCOMB)
-                .criterion(hasItem(Items.BIRCH_DOOR), conditionsFromItem(Items.BIRCH_DOOR))
-                .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_birch_door"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_BIRCH_TRAPDOOR, 1)
-                .input(Items.BIRCH_TRAPDOOR)
-                .input(Items.HONEYCOMB)
-                .criterion(hasItem(Items.BIRCH_TRAPDOOR), conditionsFromItem(Items.BIRCH_TRAPDOOR))
-                .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_birch_trapdoor"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_BIRCH_FENCE, 1)
                 .input(Items.BIRCH_FENCE)
@@ -508,20 +481,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
                 .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_mangrove_slab"));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_MANGROVE_DOOR, 1)
-                .input(Items.MANGROVE_DOOR)
-                .input(Items.HONEYCOMB)
-                .criterion(hasItem(Items.MANGROVE_DOOR), conditionsFromItem(Items.MANGROVE_DOOR))
-                .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_mangrove_door"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_MANGROVE_TRAPDOOR, 1)
-                .input(Items.MANGROVE_TRAPDOOR)
-                .input(Items.HONEYCOMB)
-                .criterion(hasItem(Items.MANGROVE_TRAPDOOR), conditionsFromItem(Items.MANGROVE_TRAPDOOR))
-                .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_mangrove_trapdoor"));
-
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_MANGROVE_FENCE, 1)
                 .input(Items.MANGROVE_FENCE)
                 .input(Items.HONEYCOMB)
@@ -564,20 +523,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.BAMBOO_SLAB), conditionsFromItem(Items.BAMBOO_SLAB))
                 .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
                 .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_bamboo_slab"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_BAMBOO_DOOR, 1)
-                .input(Items.BAMBOO_DOOR)
-                .input(Items.HONEYCOMB)
-                .criterion(hasItem(Items.BAMBOO_DOOR), conditionsFromItem(Items.BAMBOO_DOOR))
-                .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_bamboo_door"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_BAMBOO_TRAPDOOR, 1)
-                .input(Items.BAMBOO_TRAPDOOR)
-                .input(Items.HONEYCOMB)
-                .criterion(hasItem(Items.BAMBOO_TRAPDOOR), conditionsFromItem(Items.BAMBOO_TRAPDOOR))
-                .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "fireproof_bamboo_trapdoor"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREPROOF_BAMBOO_FENCE, 1)
                 .input(Items.BAMBOO_FENCE)

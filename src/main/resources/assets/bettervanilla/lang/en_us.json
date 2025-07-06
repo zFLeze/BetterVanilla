@@ -7,17 +7,19 @@
   "item.bettervanilla.amethyst_dust": "Amethyst Dust",
   "item.bettervanilla.gold_dust": "Gold Dust",
 
-  "block.bettervanilla.fireproof_oak_planks": "Fireproof Oak Planks",
   "block.bettervanilla.fireproof_oak_log": "Fireproof Oak Log",
   "block.bettervanilla.fireproof_oak_wood": "Fireproof Oak Wood",
   "block.bettervanilla.fireproof_stripped_oak_log": "Fireproof Stripped Oak Log",
   "block.bettervanilla.fireproof_stripped_oak_wood": "Fireproof Stripped Oak Wood",
+  "block.bettervanilla.fireproof_oak_planks": "Fireproof Oak Planks",
   "block.bettervanilla.fireproof_oak_stairs": "Fireproof Oak Stairs",
   "block.bettervanilla.fireproof_oak_slab": "Fireproof Oak Slab",
   "block.bettervanilla.fireproof_oak_door": "Fireproof Oak Door",
   "block.bettervanilla.fireproof_oak_trapdoor": "Fireproof Oak Trapdoor",
   "block.bettervanilla.fireproof_oak_pressure_plate": "Fireproof Oak Pressure Plate",
   "block.bettervanilla.fireproof_oak_button": "Fireproof Oak Button",
+  "block.bettervanilla.fireproof_oak_fence": "Fireproof Oak Fence",
+  "block.bettervanilla.fireproof_oak_fence_gate": "Fireproof Oak Fence Gate",
 
   "block.bettervanilla.fireproof_spruce_planks": "Fireproof Spruce Planks",
   "block.bettervanilla.fireproof_spruce_log": "Fireproof Spruce Log",
@@ -30,6 +32,8 @@
   "block.bettervanilla.fireproof_spruce_trapdoor": "Fireproof Spruce Trapdoor",
   "block.bettervanilla.fireproof_spruce_pressure_plate": "Fireproof Spruce Pressure Plate",
   "block.bettervanilla.fireproof_spruce_button": "Fireproof Spruce Button",
+  "block.bettervanilla.fireproof_spruce_fence": "Fireproof Spruce Fence",
+  "block.bettervanilla.fireproof_spruce_fence_gate": "Fireproof Spruce Fence Gate",
 
   "block.bettervanilla.fireproof_dark_oak_planks": "Fireproof Dark Oak Planks",
   "block.bettervanilla.fireproof_dark_oak_log": "Fireproof Dark Oak Log",
@@ -42,6 +46,8 @@
   "block.bettervanilla.fireproof_dark_oak_trapdoor": "Fireproof Dark Oak Trapdoor",
   "block.bettervanilla.fireproof_dark_oak_pressure_plate": "Fireproof Dark Oak Pressure Plate",
   "block.bettervanilla.fireproof_dark_oak_button": "Fireproof Dark Oak Button",
+  "block.bettervanilla.fireproof_dark_oak_fence": "Fireproof Dark Oak Fence",
+  "block.bettervanilla.fireproof_dark_oak_fence_gate": "Fireproof Dark Oak Fence Gate",
 
   "block.bettervanilla.fireproof_jungle_planks": "Fireproof Jungle Planks",
   "block.bettervanilla.fireproof_jungle_log": "Fireproof Jungle Log",
@@ -54,6 +60,8 @@
   "block.bettervanilla.fireproof_jungle_trapdoor": "Fireproof Jungle Trapdoor",
   "block.bettervanilla.fireproof_jungle_pressure_plate": "Fireproof Jungle Pressure Plate",
   "block.bettervanilla.fireproof_jungle_button": "Fireproof Jungle Button",
+  "block.bettervanilla.fireproof_jungle_fence": "Fireproof Jungle Fence",
+  "block.bettervanilla.fireproof_jungle_fence_gate": "Fireproof Jungle Fence Gate",
 
   "block.bettervanilla.fireproof_acacia_planks": "Fireproof Acacia Planks",
   "block.bettervanilla.fireproof_acacia_log": "Fireproof Acacia Log",
@@ -66,6 +74,8 @@
   "block.bettervanilla.fireproof_acacia_trapdoor": "Fireproof Acacia Trapdoor",
   "block.bettervanilla.fireproof_acacia_pressure_plate": "Fireproof Acacia Pressure Plate",
   "block.bettervanilla.fireproof_acacia_button": "Fireproof Acacia Button",
+  "block.bettervanilla.fireproof_acacia_fence": "Fireproof Acacia Fence",
+  "block.bettervanilla.fireproof_acacia_fence_gate": "Fireproof Acacia Fence Gate",
 
   "block.bettervanilla.fireproof_cherry_planks": "Fireproof Cherry Planks",
   "block.bettervanilla.fireproof_cherry_log": "Fireproof Cherry Log",
@@ -78,6 +88,8 @@
   "block.bettervanilla.fireproof_cherry_trapdoor": "Fireproof Cherry Trapdoor",
   "block.bettervanilla.fireproof_cherry_pressure_plate": "Fireproof Cherry Pressure Plate",
   "block.bettervanilla.fireproof_cherry_button": "Fireproof Cherry Button",
+  "block.bettervanilla.fireproof_cherry_fence": "Fireproof Cherry Fence",
+  "block.bettervanilla.fireproof_cherry_fence_gate": "Fireproof Cherry Fence Gate",
 
   "block.bettervanilla.fireproof_mangrove_planks": "Fireproof Mangrove Planks",
   "block.bettervanilla.fireproof_mangrove_log": "Fireproof Mangrove Log",
@@ -90,6 +102,8 @@
   "block.bettervanilla.fireproof_mangrove_trapdoor": "Fireproof Mangrove Trapdoor",
   "block.bettervanilla.fireproof_mangrove_pressure_plate": "Fireproof Mangrove Pressure Plate",
   "block.bettervanilla.fireproof_mangrove_button": "Fireproof Mangrove Button",
+  "block.bettervanilla.fireproof_mangrove_fence": "Fireproof Mangrove Fence",
+  "block.bettervanilla.fireproof_mangrove_fence_gate": "Fireproof Mangrove Fence Gate",
 
   "block.bettervanilla.fireproof_bamboo_planks": "Fireproof Bamboo Planks",
   "block.bettervanilla.fireproof_bamboo_block": "Fireproof Bamboo Block",
@@ -101,6 +115,8 @@
   "block.bettervanilla.fireproof_bamboo_trapdoor": "Fireproof Bamboo Trapdoor",
   "block.bettervanilla.fireproof_bamboo_pressure_plate": "Fireproof Bamboo Pressure Plate",
   "block.bettervanilla.fireproof_bamboo_button": "Fireproof Bamboo Button",
+  "block.bettervanilla.fireproof_bamboo_fence": "Fireproof Bamboo Fence",
+  "block.bettervanilla.fireproof_bamboo_fence_gate": "Fireproof Bamboo Fence Gate",
 
   "block.bettervanilla.fireproof_birch_planks": "Fireproof Birch Planks",
   "block.bettervanilla.fireproof_birch_log": "Fireproof Birch Log",
@@ -113,6 +129,18 @@
   "block.bettervanilla.fireproof_birch_trapdoor": "Fireproof Birch Trapdoor",
   "block.bettervanilla.fireproof_birch_pressure_plate": "Fireproof Birch Pressure Plate",
   "block.bettervanilla.fireproof_birch_button": "Fireproof Birch Button",
+  "block.bettervanilla.fireproof_birch_fence": "Fireproof Birch Fence",
+  "block.bettervanilla.fireproof_birch_fence_gate": "Fireproof Birch Fence Gate",
 
-  "itemgroup.bettervanilla.fireproof_wood_blocks": "Fireproof Wood Blocks"
+  "itemgroup.bettervanilla.fireproof_wood_blocks": "Fireproof Wood Blocks",
+  "item.bettervanilla.copper_sword": "Copper Sword",
+  "item.bettervanilla.copper_axe": "Copper Axe",
+  "item.bettervanilla.copper_pickaxe": "Copper Pickaxe",
+  "item.bettervanilla.copper_shovel": "Copper Shovel",
+  "item.bettervanilla.copper_hoe": "Copper Hoe",
+  "item.bettervanilla.copper_helmet": "Copper Helmet",
+  "item.bettervanilla.copper_chestplate": "Copper Chestplate",
+  "item.bettervanilla.copper_leggings": "Copper Leggings",
+  "item.bettervanilla.copper_boots": "Copper Boots",
+  "effect.bettervanilla.rust": "Rust"
 }

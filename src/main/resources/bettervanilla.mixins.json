@@ -1,0 +1,21 @@
+{
+	"required": true,
+	"package": "net.flez.bettervanilla.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ChangeStackabilityMixin",
+		"PracticeMixin",
+		"ExampleMixin",
+		"BounceArrowMixin",
+		"BounceEggMixin",
+		"BounceEnderPearlMixin",
+		"BounceExperienceBottleMixin",
+		"BouncePotionsMixin",
+		"BounceSnowballMixin",
+		"BounceSpectralArrowMixin",
+		"BounceWindChargeMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

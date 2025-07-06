@@ -2,6 +2,7 @@ package net.flez.bettervanilla.block;
 
 import net.flez.bettervanilla.BetterVanilla;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.flez.bettervanilla.block.custom.BatteryBlock;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -12,9 +13,13 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
-    public static final Block FIREPROOF_OAK_PLANKS = registerBlock("fireproof_oak_planks",
-            new Block(AbstractBlock.Settings.create().strength(2f, 3f)
-                    .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block BATERRY_BLOCK = registerBlock("battery_block",
+            new BatteryBlock(AbstractBlock.Settings.create()
+                    .strength(3.5f)
+                    .nonOpaque()));
+
+
 
     public static final Block FIREPROOF_OAK_LOG = registerBlock("fireproof_oak_log",
             new PillarBlock(AbstractBlock.Settings.create().strength(2f, 2f)
@@ -30,6 +35,10 @@ public class ModBlocks {
 
     public static final Block FIREPROOF_STRIPPED_OAK_WOOD = registerBlock("fireproof_stripped_oak_wood",
             new PillarBlock(AbstractBlock.Settings.create().strength(2f, 2f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block FIREPROOF_OAK_PLANKS = registerBlock("fireproof_oak_planks",
+            new Block(AbstractBlock.Settings.create().strength(2f, 3f)
                     .sounds(BlockSoundGroup.WOOD)));
 
     public static final Block FIREPROOF_OAK_STAIRS = registerBlock("fireproof_oak_stairs",
@@ -66,24 +75,18 @@ public class ModBlocks {
 
     public static final Block FIREPROOF_OAK_DOOR = registerBlock("fireproof_oak_door",
             new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create()
-                     .strength(3f).nonOpaque()
+                    .strength(3f)
                     .sounds(BlockSoundGroup.WOOD)));
 
     public static final Block FIREPROOF_OAK_TRAPDOOR = registerBlock("fireproof_oak_trapdoor",
-            new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create()
+            new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create()
                     .strength(3f)
-                    .sounds(BlockSoundGroup.WOOD)
-                    .nonOpaque()));
-
-
-
-
-
-
-
-    public static final Block FIREPROOF_SPRUCE_PLANKS = registerBlock("fireproof_spruce_planks",
-            new Block(AbstractBlock.Settings.create().strength(2f, 3f)
                     .sounds(BlockSoundGroup.WOOD)));
+
+
+
+
+
 
     public static final Block FIREPROOF_SPRUCE_LOG = registerBlock("fireproof_spruce_log",
             new PillarBlock(AbstractBlock.Settings.create().strength(2f, 2f)
@@ -101,6 +104,10 @@ public class ModBlocks {
             new PillarBlock(AbstractBlock.Settings.create().strength(2f, 2f)
                     .sounds(BlockSoundGroup.WOOD)));
 
+    public static final Block FIREPROOF_SPRUCE_PLANKS = registerBlock("fireproof_spruce_planks",
+            new Block(AbstractBlock.Settings.create().strength(2f, 3f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
     public static final Block FIREPROOF_SPRUCE_STAIRS = registerBlock("fireproof_spruce_stairs",
             new StairsBlock(ModBlocks.FIREPROOF_SPRUCE_PLANKS
                     .getDefaultState(), AbstractBlock.Settings.create()
@@ -110,6 +117,16 @@ public class ModBlocks {
     public static final Block FIREPROOF_SPRUCE_SLAB = registerBlock("fireproof_spruce_slab",
             new SlabBlock(AbstractBlock.Settings.create()
                     .strength(2f, 3f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block FIREPROOF_SPRUCE_DOOR = registerBlock("fireproof_spruce_door",
+            new DoorBlock(BlockSetType.SPRUCE, AbstractBlock.Settings.create()
+                    .strength(3f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block FIREPROOF_SPRUCE_TRAPDOOR = registerBlock("fireproof_spruce_trapdoor",
+            new DoorBlock(BlockSetType.SPRUCE, AbstractBlock.Settings.create()
+                    .strength(3f)
                     .sounds(BlockSoundGroup.WOOD)));
 
     public static final Block FIREPROOF_SPRUCE_BUTTON = registerBlock("fireproof_spruce_button",
@@ -133,91 +150,14 @@ public class ModBlocks {
                     .strength(2f, 3f)
                     .sounds(BlockSoundGroup.WOOD)));
 
-    public static final Block FIREPROOF_SPRUCE_DOOR = registerBlock("fireproof_spruce_door",
-            new DoorBlock(BlockSetType.SPRUCE, AbstractBlock.Settings.create()
-                    .strength(3f).nonOpaque()
-                    .sounds(BlockSoundGroup.WOOD)));
-
-    public static final Block FIREPROOF_SPRUCE_TRAPDOOR = registerBlock("fireproof_spruce_trapdoor",
-            new TrapdoorBlock(BlockSetType.SPRUCE, AbstractBlock.Settings.create()
-                    .strength(3f)
-                    .sounds(BlockSoundGroup.WOOD)
-                    .nonOpaque()));
 
 
 
 
 
-    public static final Block FIREPROOF_BIRCH_PLANKS = registerBlock("fireproof_birch_planks",
-            new Block(AbstractBlock.Settings.create().strength(2f, 3f)
-                    .sounds(BlockSoundGroup.WOOD)));
-
-    public static final Block FIREPROOF_BIRCH_LOG = registerBlock("fireproof_birch_log",
-            new PillarBlock(AbstractBlock.Settings.create().strength(2f, 2f)
-                    .sounds(BlockSoundGroup.WOOD)));
-
-    public static final Block FIREPROOF_BIRCH_WOOD = registerBlock("fireproof_birch_wood",
-            new PillarBlock(AbstractBlock.Settings.create().strength(2f, 2f)
-                    .sounds(BlockSoundGroup.WOOD)));
-
-    public static final Block FIREPROOF_STRIPPED_BIRCH_LOG = registerBlock("fireproof_stripped_birch_log",
-            new PillarBlock(AbstractBlock.Settings.create().strength(2f, 2f)
-                    .sounds(BlockSoundGroup.WOOD)));
-
-    public static final Block FIREPROOF_STRIPPED_BIRCH_WOOD = registerBlock("fireproof_stripped_birch_wood",
-            new PillarBlock(AbstractBlock.Settings.create().strength(2f, 2f)
-                    .sounds(BlockSoundGroup.WOOD)));
-
-    public static final Block FIREPROOF_BIRCH_STAIRS = registerBlock("fireproof_birch_stairs",
-            new StairsBlock(ModBlocks.FIREPROOF_BIRCH_PLANKS
-                    .getDefaultState(), AbstractBlock.Settings.create()
-                    .strength(2f, 3f)
-                    .sounds(BlockSoundGroup.WOOD)));
-
-    public static final Block FIREPROOF_BIRCH_SLAB = registerBlock("fireproof_birch_slab",
-            new SlabBlock(AbstractBlock.Settings.create()
-                    .strength(2f, 3f)
-                    .sounds(BlockSoundGroup.WOOD)));
-
-    public static final Block FIREPROOF_BIRCH_BUTTON = registerBlock("fireproof_birch_button",
-            new ButtonBlock(BlockSetType.BIRCH, 15, AbstractBlock.Settings.create()
-                    .strength(0.5f, 1.5f)
-                    .noCollision()
-                    .sounds(BlockSoundGroup.WOOD)));
-
-    public static final Block FIREPROOF_BIRCH_PRESSURE_PLATE = registerBlock("fireproof_birch_pressure_plate",
-            new PressurePlateBlock(BlockSetType.BIRCH, AbstractBlock.Settings.create()
-                    .strength(0.5f, 2.5f)
-                    .sounds(BlockSoundGroup.WOOD)));
-
-    public static final Block FIREPROOF_BIRCH_FENCE = registerBlock("fireproof_birch_fence",
-            new FenceBlock(AbstractBlock.Settings.create()
-                    .strength(2f, 3f)
-                    .sounds(BlockSoundGroup.WOOD)));
-
-    public static final Block FIREPROOF_BIRCH_FENCE_GATE = registerBlock("fireproof_birch_fence_gate",
-            new FenceGateBlock(WoodType.BIRCH, AbstractBlock.Settings.create()
-                    .strength(2f, 3f)
-                    .sounds(BlockSoundGroup.WOOD)));
-
-    public static final Block FIREPROOF_BIRCH_DOOR = registerBlock("fireproof_birch_door",
-            new DoorBlock(BlockSetType.BIRCH, AbstractBlock.Settings.create()
-                    .strength(3f).nonOpaque()
-                    .sounds(BlockSoundGroup.WOOD)));
-
-    public static final Block FIREPROOF_BIRCH_TRAPDOOR = registerBlock("fireproof_birch_trapdoor",
-            new TrapdoorBlock(BlockSetType.BIRCH, AbstractBlock.Settings.create()
-                    .strength(3f)
-                    .sounds(BlockSoundGroup.WOOD)
-                    .nonOpaque()));
 
 
 
-
-
-    public static final Block FIREPROOF_DARK_OAK_PLANKS = registerBlock("fireproof_dark_oak_planks",
-            new Block(AbstractBlock.Settings.create().strength(2f, 3f)
-                    .sounds(BlockSoundGroup.WOOD)));
 
     public static final Block FIREPROOF_DARK_OAK_LOG = registerBlock("fireproof_dark_oak_log",
             new PillarBlock(AbstractBlock.Settings.create().strength(2f, 2f)
@@ -235,6 +175,10 @@ public class ModBlocks {
             new PillarBlock(AbstractBlock.Settings.create().strength(2f, 2f)
                     .sounds(BlockSoundGroup.WOOD)));
 
+    public static final Block FIREPROOF_DARK_OAK_PLANKS = registerBlock("fireproof_dark_oak_planks",
+            new Block(AbstractBlock.Settings.create().strength(2f, 3f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
     public static final Block FIREPROOF_DARK_OAK_STAIRS = registerBlock("fireproof_dark_oak_stairs",
             new StairsBlock(ModBlocks.FIREPROOF_DARK_OAK_PLANKS
                     .getDefaultState(), AbstractBlock.Settings.create()
@@ -244,6 +188,16 @@ public class ModBlocks {
     public static final Block FIREPROOF_DARK_OAK_SLAB = registerBlock("fireproof_dark_oak_slab",
             new SlabBlock(AbstractBlock.Settings.create()
                     .strength(2f, 3f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block FIREPROOF_DARK_OAK_DOOR = registerBlock("fireproof_dark_oak_door",
+            new DoorBlock(BlockSetType.DARK_OAK, AbstractBlock.Settings.create()
+                    .strength(3f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block FIREPROOF_DARK_OAK_TRAPDOOR = registerBlock("fireproof_dark_oak_trapdoor",
+            new DoorBlock(BlockSetType.DARK_OAK, AbstractBlock.Settings.create()
+                    .strength(3f)
                     .sounds(BlockSoundGroup.WOOD)));
 
     public static final Block FIREPROOF_DARK_OAK_BUTTON = registerBlock("fireproof_dark_oak_button",
@@ -266,17 +220,6 @@ public class ModBlocks {
             new FenceGateBlock(WoodType.DARK_OAK, AbstractBlock.Settings.create()
                     .strength(2f, 3f)
                     .sounds(BlockSoundGroup.WOOD)));
-
-    public static final Block FIREPROOF_DARK_OAK_DOOR = registerBlock("fireproof_dark_oak_door",
-            new DoorBlock(BlockSetType.DARK_OAK, AbstractBlock.Settings.create()
-                    .strength(3f).nonOpaque()
-                    .sounds(BlockSoundGroup.WOOD)));
-
-    public static final Block FIREPROOF_DARK_OAK_TRAPDOOR = registerBlock("fireproof_dark_oak_trapdoor",
-            new TrapdoorBlock(BlockSetType.DARK_OAK, AbstractBlock.Settings.create()
-                    .strength(3f)
-                    .sounds(BlockSoundGroup.WOOD)
-                    .nonOpaque()));
 
 
 
@@ -313,6 +256,16 @@ public class ModBlocks {
                     .strength(2f, 3f)
                     .sounds(BlockSoundGroup.WOOD)));
 
+    public static final Block FIREPROOF_ACACIA_DOOR = registerBlock("fireproof_acacia_door",
+            new DoorBlock(BlockSetType.ACACIA, AbstractBlock.Settings.create()
+                    .strength(3f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block FIREPROOF_ACACIA_TRAPDOOR = registerBlock("fireproof_acacia_trapdoor",
+            new DoorBlock(BlockSetType.ACACIA, AbstractBlock.Settings.create()
+                    .strength(3f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
     public static final Block FIREPROOF_ACACIA_BUTTON = registerBlock("fireproof_acacia_button",
             new ButtonBlock(BlockSetType.ACACIA, 15, AbstractBlock.Settings.create()
                     .strength(0.5f, 1.5f)
@@ -333,17 +286,6 @@ public class ModBlocks {
             new FenceGateBlock(WoodType.ACACIA, AbstractBlock.Settings.create()
                     .strength(2f, 3f)
                     .sounds(BlockSoundGroup.WOOD)));
-
-    public static final Block FIREPROOF_ACACIA_DOOR = registerBlock("fireproof_acacia_door",
-            new DoorBlock(BlockSetType.ACACIA, AbstractBlock.Settings.create()
-                    .strength(3f).nonOpaque()
-                    .sounds(BlockSoundGroup.WOOD)));
-
-    public static final Block FIREPROOF_ACACIA_TRAPDOOR = registerBlock("fireproof_acacia_trapdoor",
-            new TrapdoorBlock(BlockSetType.ACACIA, AbstractBlock.Settings.create()
-                    .strength(3f)
-                    .sounds(BlockSoundGroup.WOOD)
-                    .nonOpaque()));
 
 
 
@@ -374,7 +316,7 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.WOOD)));
 
     public static final Block FIREPROOF_CHERRY_STAIRS = registerBlock("fireproof_cherry_stairs",
-            new StairsBlock(ModBlocks.FIREPROOF_BIRCH_PLANKS
+            new StairsBlock(ModBlocks.FIREPROOF_CHERRY_PLANKS
                     .getDefaultState(), AbstractBlock.Settings.create()
                     .strength(2f, 3f)
                     .sounds(BlockSoundGroup.WOOD)));
@@ -382,6 +324,16 @@ public class ModBlocks {
     public static final Block FIREPROOF_CHERRY_SLAB = registerBlock("fireproof_cherry_slab",
             new SlabBlock(AbstractBlock.Settings.create()
                     .strength(2f, 3f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block FIREPROOF_CHERRY_DOOR = registerBlock("fireproof_cherry_door",
+            new DoorBlock(BlockSetType.CHERRY, AbstractBlock.Settings.create()
+                    .strength(3f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block FIREPROOF_CHERRY_TRAPDOOR = registerBlock("fireproof_cherry_trapdoor",
+            new DoorBlock(BlockSetType.CHERRY, AbstractBlock.Settings.create()
+                    .strength(3f)
                     .sounds(BlockSoundGroup.WOOD)));
 
     public static final Block FIREPROOF_CHERRY_BUTTON = registerBlock("fireproof_cherry_button",
@@ -404,18 +356,6 @@ public class ModBlocks {
             new FenceGateBlock(WoodType.CHERRY, AbstractBlock.Settings.create()
                     .strength(2f, 3f)
                     .sounds(BlockSoundGroup.WOOD)));
-
-    public static final Block FIREPROOF_CHERRY_DOOR = registerBlock("fireproof_cherry_door",
-            new DoorBlock(BlockSetType.CHERRY, AbstractBlock.Settings.create()
-                    .strength(3f).nonOpaque()
-                    .sounds(BlockSoundGroup.WOOD)));
-
-    public static final Block FIREPROOF_CHERRY_TRAPDOOR = registerBlock("fireproof_cherry_trapdoor",
-            new TrapdoorBlock(BlockSetType.CHERRY, AbstractBlock.Settings.create()
-                    .strength(3f)
-                    .sounds(BlockSoundGroup.WOOD)
-                    .nonOpaque()));
-
 
 
 
@@ -450,6 +390,16 @@ public class ModBlocks {
                     .strength(2f, 3f)
                     .sounds(BlockSoundGroup.WOOD)));
 
+    public static final Block FIREPROOF_BAMBOO_DOOR = registerBlock("fireproof_bamboo_door",
+            new DoorBlock(BlockSetType.BAMBOO, AbstractBlock.Settings.create()
+                    .strength(3f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block FIREPROOF_BAMBOO_TRAPDOOR = registerBlock("fireproof_bamboo_trapdoor",
+            new DoorBlock(BlockSetType.BAMBOO, AbstractBlock.Settings.create()
+                    .strength(3f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
     public static final Block FIREPROOF_BAMBOO_BUTTON = registerBlock("fireproof_bamboo_button",
             new ButtonBlock(BlockSetType.BAMBOO, 15, AbstractBlock.Settings.create()
                     .strength(0.5f, 1.5f)
@@ -471,25 +421,74 @@ public class ModBlocks {
                     .strength(2f, 3f)
                     .sounds(BlockSoundGroup.WOOD)));
 
-    public static final Block FIREPROOF_BAMBOO_DOOR = registerBlock("fireproof_bamboo_door",
-            new DoorBlock(BlockSetType.BAMBOO, AbstractBlock.Settings.create()
-                    .strength(3f).nonOpaque()
+
+
+
+
+    public static final Block FIREPROOF_BIRCH_LOG = registerBlock("fireproof_birch_log",
+            new PillarBlock(AbstractBlock.Settings.create().strength(2f, 2f)
                     .sounds(BlockSoundGroup.WOOD)));
 
-    public static final Block FIREPROOF_BAMBOO_TRAPDOOR = registerBlock("fireproof_bamboo_trapdoor",
-            new TrapdoorBlock(BlockSetType.BAMBOO, AbstractBlock.Settings.create()
-                    .strength(3f)
-                    .sounds(BlockSoundGroup.WOOD)
-                    .nonOpaque()));
+    public static final Block FIREPROOF_BIRCH_WOOD = registerBlock("fireproof_birch_wood",
+            new PillarBlock(AbstractBlock.Settings.create().strength(2f, 2f)
+                    .sounds(BlockSoundGroup.WOOD)));
 
+    public static final Block FIREPROOF_STRIPPED_BIRCH_LOG = registerBlock("fireproof_stripped_birch_log",
+            new PillarBlock(AbstractBlock.Settings.create().strength(2f, 2f)
+                    .sounds(BlockSoundGroup.WOOD)));
 
+    public static final Block FIREPROOF_STRIPPED_BIRCH_WOOD = registerBlock("fireproof_stripped_birch_wood",
+            new PillarBlock(AbstractBlock.Settings.create().strength(2f, 2f)
+                    .sounds(BlockSoundGroup.WOOD)));
 
+    public static final Block FIREPROOF_BIRCH_PLANKS = registerBlock("fireproof_birch_planks",
+            new Block(AbstractBlock.Settings.create().strength(2f, 3f)
+                    .sounds(BlockSoundGroup.WOOD)));
 
-
-    public static final Block FIREPROOF_JUNGLE_PLANKS = registerBlock("fireproof_jungle_planks",
-            new Block(AbstractBlock.Settings.create()
+    public static final Block FIREPROOF_BIRCH_STAIRS = registerBlock("fireproof_birch_stairs",
+            new StairsBlock(ModBlocks.FIREPROOF_BIRCH_PLANKS
+                    .getDefaultState(), AbstractBlock.Settings.create()
                     .strength(2f, 3f)
                     .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block FIREPROOF_BIRCH_SLAB = registerBlock("fireproof_birch_slab",
+            new SlabBlock(AbstractBlock.Settings.create()
+                    .strength(2f, 3f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block FIREPROOF_BIRCH_DOOR = registerBlock("fireproof_birch_door",
+            new DoorBlock(BlockSetType.BIRCH, AbstractBlock.Settings.create()
+                    .strength(3f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block FIREPROOF_BIRCH_TRAPDOOR = registerBlock("fireproof_birch_trapdoor",
+            new DoorBlock(BlockSetType.BIRCH, AbstractBlock.Settings.create()
+                    .strength(3f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block FIREPROOF_BIRCH_BUTTON = registerBlock("fireproof_birch_button",
+            new ButtonBlock(BlockSetType.BIRCH, 15, AbstractBlock.Settings.create()
+                    .strength(0.5f, 1.5f)
+                    .noCollision()
+                    .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block FIREPROOF_BIRCH_PRESSURE_PLATE = registerBlock("fireproof_birch_pressure_plate",
+            new PressurePlateBlock(BlockSetType.BIRCH, AbstractBlock.Settings.create()
+                    .strength(0.5f, 2.5f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block FIREPROOF_BIRCH_FENCE = registerBlock("fireproof_birch_fence",
+            new FenceBlock(AbstractBlock.Settings.create()
+                    .strength(2f, 3f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block FIREPROOF_BIRCH_FENCE_GATE = registerBlock("fireproof_birch_fence_gate",
+            new FenceGateBlock(WoodType.BIRCH, AbstractBlock.Settings.create()
+                    .strength(2f, 3f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
+
+
 
     public static final Block FIREPROOF_JUNGLE_LOG = registerBlock("fireproof_jungle_log",
             new PillarBlock(AbstractBlock.Settings.create()
@@ -509,6 +508,11 @@ public class ModBlocks {
     public static final Block FIREPROOF_STRIPPED_JUNGLE_WOOD = registerBlock("fireproof_stripped_jungle_wood",
             new PillarBlock(AbstractBlock.Settings.create()
                     .strength(2f, 2f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block FIREPROOF_JUNGLE_PLANKS = registerBlock("fireproof_jungle_planks",
+            new Block(AbstractBlock.Settings.create()
+                    .strength(2f, 3f)
                     .sounds(BlockSoundGroup.WOOD)));
 
     public static final Block FIREPROOF_JUNGLE_STAIRS = registerBlock("fireproof_jungle_stairs",
@@ -543,25 +547,10 @@ public class ModBlocks {
                     .strength(2f, 3f)
                     .sounds(BlockSoundGroup.WOOD)));
 
-    public static final Block FIREPROOF_JUNGLE_DOOR = registerBlock("fireproof_jungle_door",
-            new DoorBlock(BlockSetType.JUNGLE, AbstractBlock.Settings.create()
-                    .strength(3f).nonOpaque()
-                    .sounds(BlockSoundGroup.WOOD)));
-
-    public static final Block FIREPROOF_JUNGLE_TRAPDOOR = registerBlock("fireproof_jungle_trapdoor",
-            new TrapdoorBlock(BlockSetType.JUNGLE, AbstractBlock.Settings.create()
-                    .strength(3f)
-                    .sounds(BlockSoundGroup.WOOD)
-                    .nonOpaque()));
 
 
 
 
-
-    public static final Block FIREPROOF_MANGROVE_PLANKS = registerBlock("fireproof_mangrove_planks",
-            new Block(AbstractBlock.Settings.create()
-            .strength(2f, 3f)
-            .sounds(BlockSoundGroup.WOOD)));
 
     public static final Block FIREPROOF_MANGROVE_LOG = registerBlock("fireproof_mangrove_log",
             new PillarBlock(AbstractBlock.Settings.create()
@@ -583,6 +572,11 @@ public class ModBlocks {
             .strength(2f, 2f)
             .sounds(BlockSoundGroup.WOOD)));
 
+    public static final Block FIREPROOF_MANGROVE_PLANKS = registerBlock("fireproof_mangrove_planks",
+            new Block(AbstractBlock.Settings.create()
+                    .strength(2f, 3f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
     public static final Block FIREPROOF_MANGROVE_STAIRS = registerBlock("fireproof_mangrove_stairs",
             new StairsBlock(ModBlocks.FIREPROOF_MANGROVE_PLANKS
                     .getDefaultState(), AbstractBlock.Settings.create()
@@ -592,6 +586,16 @@ public class ModBlocks {
     public static final Block FIREPROOF_MANGROVE_SLAB = registerBlock("fireproof_mangrove_slab",
             new SlabBlock(AbstractBlock.Settings.create()
                     .strength(2f, 3f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block FIREPROOF_MANGROVE_DOOR = registerBlock("fireproof_mangrove_door",
+            new DoorBlock(BlockSetType.MANGROVE, AbstractBlock.Settings.create()
+                    .strength(3f)
+                    .sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block FIREPROOF_MANGROVE_TRAPDOOR = registerBlock("fireproof_mangrove_trapdoor",
+            new DoorBlock(BlockSetType.MANGROVE, AbstractBlock.Settings.create()
+                    .strength(3f)
                     .sounds(BlockSoundGroup.WOOD)));
 
     public static final Block FIREPROOF_MANGROVE_BUTTON = registerBlock("fireproof_mangrove_button",
@@ -615,16 +619,8 @@ public class ModBlocks {
                     .strength(2f, 3f)
                     .sounds(BlockSoundGroup.WOOD)));
 
-    public static final Block FIREPROOF_MANGROVE_DOOR = registerBlock("fireproof_mangrove_door",
-            new DoorBlock(BlockSetType.MANGROVE, AbstractBlock.Settings.create()
-                    .strength(3f).nonOpaque()
-                    .sounds(BlockSoundGroup.WOOD)));
 
-    public static final Block FIREPROOF_MANGROVE_TRAPDOOR = registerBlock("fireproof_mangrove_trapdoor",
-            new TrapdoorBlock(BlockSetType.MANGROVE, AbstractBlock.Settings.create()
-                    .strength(3f)
-                    .sounds(BlockSoundGroup.WOOD)
-                    .nonOpaque()));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -646,10 +642,10 @@ public class ModBlocks {
             entries.add(FIREPROOF_STRIPPED_OAK_WOOD);
             entries.add(FIREPROOF_OAK_STAIRS);
             entries.add(FIREPROOF_OAK_SLAB);
-            entries.add(FIREPROOF_OAK_FENCE);
-            entries.add(FIREPROOF_OAK_FENCE_GATE);
             entries.add(FIREPROOF_OAK_DOOR);
             entries.add(FIREPROOF_OAK_TRAPDOOR);
+            entries.add(FIREPROOF_OAK_FENCE);
+            entries.add(FIREPROOF_OAK_FENCE_GATE);
             entries.add(FIREPROOF_OAK_PRESSURE_PLATE);
             entries.add(FIREPROOF_OAK_BUTTON);
 
@@ -660,10 +656,10 @@ public class ModBlocks {
             entries.add(FIREPROOF_STRIPPED_SPRUCE_WOOD);
             entries.add(FIREPROOF_SPRUCE_STAIRS);
             entries.add(FIREPROOF_SPRUCE_SLAB);
-            entries.add(FIREPROOF_SPRUCE_FENCE);
-            entries.add(FIREPROOF_SPRUCE_FENCE_GATE);
             entries.add(FIREPROOF_SPRUCE_DOOR);
             entries.add(FIREPROOF_SPRUCE_TRAPDOOR);
+            entries.add(FIREPROOF_SPRUCE_FENCE);
+            entries.add(FIREPROOF_SPRUCE_FENCE_GATE);
             entries.add(FIREPROOF_SPRUCE_PRESSURE_PLATE);
             entries.add(FIREPROOF_SPRUCE_BUTTON);
 
@@ -674,10 +670,10 @@ public class ModBlocks {
             entries.add(FIREPROOF_STRIPPED_BIRCH_WOOD);
             entries.add(FIREPROOF_BIRCH_STAIRS);
             entries.add(FIREPROOF_BIRCH_SLAB);
-            entries.add(FIREPROOF_BIRCH_FENCE);
-            entries.add(FIREPROOF_BIRCH_FENCE_GATE);
             entries.add(FIREPROOF_BIRCH_DOOR);
             entries.add(FIREPROOF_BIRCH_TRAPDOOR);
+            entries.add(FIREPROOF_BIRCH_FENCE);
+            entries.add(FIREPROOF_BIRCH_FENCE_GATE);
             entries.add(FIREPROOF_BIRCH_PRESSURE_PLATE);
             entries.add(FIREPROOF_BIRCH_BUTTON);
 
@@ -688,10 +684,10 @@ public class ModBlocks {
             entries.add(FIREPROOF_STRIPPED_DARK_OAK_WOOD);
             entries.add(FIREPROOF_DARK_OAK_STAIRS);
             entries.add(FIREPROOF_DARK_OAK_SLAB);
-            entries.add(FIREPROOF_DARK_OAK_FENCE);
-            entries.add(FIREPROOF_DARK_OAK_FENCE_GATE);
             entries.add(FIREPROOF_DARK_OAK_DOOR);
             entries.add(FIREPROOF_DARK_OAK_TRAPDOOR);
+            entries.add(FIREPROOF_DARK_OAK_FENCE);
+            entries.add(FIREPROOF_DARK_OAK_FENCE_GATE);
             entries.add(FIREPROOF_DARK_OAK_PRESSURE_PLATE);
             entries.add(FIREPROOF_DARK_OAK_BUTTON);
 
@@ -702,10 +698,10 @@ public class ModBlocks {
             entries.add(FIREPROOF_STRIPPED_ACACIA_WOOD);
             entries.add(FIREPROOF_ACACIA_STAIRS);
             entries.add(FIREPROOF_ACACIA_SLAB);
-            entries.add(FIREPROOF_ACACIA_FENCE);
-            entries.add(FIREPROOF_ACACIA_FENCE_GATE);
             entries.add(FIREPROOF_ACACIA_DOOR);
             entries.add(FIREPROOF_ACACIA_TRAPDOOR);
+            entries.add(FIREPROOF_ACACIA_FENCE);
+            entries.add(FIREPROOF_ACACIA_FENCE_GATE);
             entries.add(FIREPROOF_ACACIA_PRESSURE_PLATE);
             entries.add(FIREPROOF_ACACIA_BUTTON);
 
@@ -716,10 +712,10 @@ public class ModBlocks {
             entries.add(FIREPROOF_STRIPPED_CHERRY_WOOD);
             entries.add(FIREPROOF_CHERRY_STAIRS);
             entries.add(FIREPROOF_CHERRY_SLAB);
-            entries.add(FIREPROOF_CHERRY_FENCE);
-            entries.add(FIREPROOF_CHERRY_FENCE_GATE);
             entries.add(FIREPROOF_CHERRY_DOOR);
             entries.add(FIREPROOF_CHERRY_TRAPDOOR);
+            entries.add(FIREPROOF_CHERRY_FENCE);
+            entries.add(FIREPROOF_CHERRY_FENCE_GATE);
             entries.add(FIREPROOF_CHERRY_PRESSURE_PLATE);
             entries.add(FIREPROOF_CHERRY_BUTTON);
 
@@ -729,10 +725,10 @@ public class ModBlocks {
             entries.add(FIREPROOF_BAMBOO_MOSAIC);
             entries.add(FIREPROOF_BAMBOO_STAIRS);
             entries.add(FIREPROOF_BAMBOO_SLAB);
-            entries.add(FIREPROOF_BAMBOO_FENCE);
-            entries.add(FIREPROOF_BAMBOO_FENCE_GATE);
             entries.add(FIREPROOF_BAMBOO_DOOR);
             entries.add(FIREPROOF_BAMBOO_TRAPDOOR);
+            entries.add(FIREPROOF_BAMBOO_FENCE);
+            entries.add(FIREPROOF_BAMBOO_FENCE_GATE);
             entries.add(FIREPROOF_BAMBOO_PRESSURE_PLATE);
             entries.add(FIREPROOF_BAMBOO_BUTTON);
 
@@ -745,8 +741,6 @@ public class ModBlocks {
             entries.add(FIREPROOF_JUNGLE_SLAB);
             entries.add(FIREPROOF_JUNGLE_FENCE);
             entries.add(FIREPROOF_JUNGLE_FENCE_GATE);
-            entries.add(FIREPROOF_JUNGLE_DOOR);
-            entries.add(FIREPROOF_JUNGLE_TRAPDOOR);
             entries.add(FIREPROOF_JUNGLE_PRESSURE_PLATE);
             entries.add(FIREPROOF_JUNGLE_BUTTON);
 
@@ -757,10 +751,10 @@ public class ModBlocks {
             entries.add(FIREPROOF_STRIPPED_MANGROVE_WOOD);
             entries.add(FIREPROOF_MANGROVE_STAIRS);
             entries.add(FIREPROOF_MANGROVE_SLAB);
-            entries.add(FIREPROOF_MANGROVE_FENCE);
-            entries.add(FIREPROOF_MANGROVE_FENCE_GATE);
             entries.add(FIREPROOF_MANGROVE_DOOR);
             entries.add(FIREPROOF_MANGROVE_TRAPDOOR);
+            entries.add(FIREPROOF_MANGROVE_FENCE);
+            entries.add(FIREPROOF_MANGROVE_FENCE_GATE);
             entries.add(FIREPROOF_MANGROVE_PRESSURE_PLATE);
             entries.add(FIREPROOF_MANGROVE_BUTTON);
         });

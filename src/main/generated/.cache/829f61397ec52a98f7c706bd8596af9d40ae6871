@@ -1,4 +1,7 @@
-// 1.21.1	2025-06-19T21:49:14.7614096	Better Vanilla/Tags for minecraft:block
+// 1.21.1	2025-07-05T14:43:37.082379	Better Vanilla/Tags for minecraft:block
+f793d1f179ee9f8fe4874e60270bee9d90dabbcd data\bettervanilla\tags\block\sittable_stairs.json
+b239e7b03736ed687b12fa515c9a1139f07cc1a8 data\bettervanilla\tags\block\needs_copper_tool.json
 8d2bdf61cfd92e50f2966f51553364ecc7b38abe data\minecraft\tags\block\fences.json
 eeb9d71d8a2b8bb8ffc9a103c4318009ca0c0350 data\minecraft\tags\block\fence_gates.json
-b7d4ccdaa9e0ea6ca8fb9b363e9103cc283d2571 data\minecraft\tags\block\mineable\axe.json
+ed7a79db00ee0427eeb410f44b5db1fe73778db4 data\minecraft\tags\block\mineable\axe.json
+86380a634a831de014ca495d388f85ec5b927a20 data\bettervanilla\tags\block\sittable_logs.json
