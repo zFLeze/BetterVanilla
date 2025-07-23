@@ -1,4 +1,5 @@
-// 1.21.1	2025-07-05T14:43:37.0683877	Better Vanilla/Tags for minecraft:item
-5bbd7635fe52a2ad45e48fc1f7f093ce07b8c42c data\minecraft\tags\item\axes.json
+// 1.21.1	2025-07-23T11:11:56.1903634	Better Vanilla/Tags for minecraft:item
 68d7aa43c115f1141edcca31644e728da18eec53 data\minecraft\tags\item\trimmable_armor.json
+68d7aa43c115f1141edcca31644e728da18eec53 data\bettervanilla\tags\item\copper_armor.json
 f9a4be6d47f26c9df5e3b3a7545e68318fc45107 data\minecraft\tags\item\swords.json
+9ff104e70db55f42999ea60ea892cc92b4f770f3 data\bettervanilla\tags\item\copper_tools.json

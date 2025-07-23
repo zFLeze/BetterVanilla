@@ -1,14 +1,16 @@
 package net.flez.bettervanilla.datagen;
 
+import net.flez.bettervanilla.BetterVanilla;
 import net.flez.bettervanilla.block.ModBlocks;
+import net.flez.bettervanilla.block.custom.AmethystLampBlock;
 import net.flez.bettervanilla.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
+import net.minecraft.block.Blocks;
+import net.minecraft.data.client.*;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.util.Identifier;
 
 
 public class ModModelProvider extends FabricModelProvider {
@@ -24,10 +26,11 @@ public class ModModelProvider extends FabricModelProvider {
     }
 
 
+
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
 
-        //  PLANKS
+        BlockStateModelGenerator.BlockTexturePool amethystBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AMETHYST_BRICKS);
         BlockStateModelGenerator.BlockTexturePool fireproofOakPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FIREPROOF_OAK_PLANKS);
         BlockStateModelGenerator.BlockTexturePool fireproofSprucePlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FIREPROOF_SPRUCE_PLANKS);
         BlockStateModelGenerator.BlockTexturePool fireproofDarkOakPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FIREPROOF_DARK_OAK_PLANKS);
@@ -38,10 +41,38 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool fireproofBambooPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FIREPROOF_BAMBOO_PLANKS);
         BlockStateModelGenerator.BlockTexturePool fireproofBirchPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FIREPROOF_BIRCH_PLANKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FIREPROOF_BAMBOO_MOSAIC);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_AMETHYST_BRICKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_AMETHYST_BLOCK);
+
+        amethystBricksPool.stairs(ModBlocks.AMETHYST_BRICK_STAIRS);
+        amethystBricksPool.slab(ModBlocks.AMETHYST_BRICK_SLAB);
+        amethystBricksPool.wall(ModBlocks.AMETHYST_BRICK_WALL);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.AMETHYST_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
+        blockStateModelGenerator.registerDoor(ModBlocks.AMETHYST_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.AMETHYST_TRAPDOOR);
+        Identifier lampOffIdentifier = TexturedModel.CUBE_ALL
+                .upload(ModBlocks.AMETHYST_LAMP, blockStateModelGenerator.modelCollector);
+
+        Identifier lampOnIdentifier = blockStateModelGenerator.createSubModel(
+                ModBlocks.AMETHYST_LAMP, "_on", Models.CUBE_ALL, TextureMap::all);
+
+        blockStateModelGenerator.blockStateCollector.accept(
+                VariantsBlockStateSupplier.create(ModBlocks.AMETHYST_LAMP).coordinate(BlockStateModelGenerator.createBooleanModelMap(
+                        AmethystLampBlock.LIT, lampOnIdentifier, lampOffIdentifier)));
 
 
-        //  NON BLOCK FIREPROOF WOOD BLOCKS
-        //  OAK
+        blockStateModelGenerator.registerCubeWithCustomTextures(ModBlocks.SPRUCE_CRAFTING_TABLE, Blocks.SPRUCE_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(ModBlocks.DARK_OAK_CRAFTING_TABLE, Blocks.DARK_OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(ModBlocks.JUNGLE_CRAFTING_TABLE, Blocks.JUNGLE_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(ModBlocks.ACACIA_CRAFTING_TABLE, Blocks.ACACIA_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(ModBlocks.MANGROVE_CRAFTING_TABLE, Blocks.MANGROVE_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(ModBlocks.CHERRY_CRAFTING_TABLE, Blocks.CHERRY_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(ModBlocks.BAMBOO_CRAFTING_TABLE, Blocks.BAMBOO_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(ModBlocks.BIRCH_CRAFTING_TABLE, Blocks.BIRCH_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(ModBlocks.CRIMSON_CRAFTING_TABLE, Blocks.CRIMSON_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(ModBlocks.WARPED_CRAFTING_TABLE, Blocks.WARPED_PLANKS, TextureMap::frontSideWithCustomBottom);
+
+
         fireproofOakPlanksPool.stairs(ModBlocks.FIREPROOF_OAK_STAIRS);
         fireproofOakPlanksPool.slab(ModBlocks.FIREPROOF_OAK_SLAB);
         fireproofOakPlanksPool.fence(ModBlocks.FIREPROOF_OAK_FENCE);
@@ -49,7 +80,6 @@ public class ModModelProvider extends FabricModelProvider {
         fireproofOakPlanksPool.pressurePlate(ModBlocks.FIREPROOF_OAK_PRESSURE_PLATE);
         fireproofOakPlanksPool.button(ModBlocks.FIREPROOF_OAK_BUTTON);
 
-        //  SPRUCE
         fireproofSprucePlanksPool.stairs(ModBlocks.FIREPROOF_SPRUCE_STAIRS);
         fireproofSprucePlanksPool.slab(ModBlocks.FIREPROOF_SPRUCE_SLAB);
         fireproofSprucePlanksPool.fence(ModBlocks.FIREPROOF_SPRUCE_FENCE);
@@ -57,7 +87,6 @@ public class ModModelProvider extends FabricModelProvider {
         fireproofSprucePlanksPool.pressurePlate(ModBlocks.FIREPROOF_SPRUCE_PRESSURE_PLATE);
         fireproofSprucePlanksPool.button(ModBlocks.FIREPROOF_SPRUCE_BUTTON);
 
-        //  DARK OAK
         fireproofDarkOakPlanksPool.stairs(ModBlocks.FIREPROOF_DARK_OAK_STAIRS);
         fireproofDarkOakPlanksPool.slab(ModBlocks.FIREPROOF_DARK_OAK_SLAB);
         fireproofDarkOakPlanksPool.fence(ModBlocks.FIREPROOF_DARK_OAK_FENCE);
@@ -65,7 +94,6 @@ public class ModModelProvider extends FabricModelProvider {
         fireproofDarkOakPlanksPool.pressurePlate(ModBlocks.FIREPROOF_DARK_OAK_PRESSURE_PLATE);
         fireproofDarkOakPlanksPool.button(ModBlocks.FIREPROOF_DARK_OAK_BUTTON);
 
-        //  JUNGLE
         fireproofJunglePlanksPool.stairs(ModBlocks.FIREPROOF_JUNGLE_STAIRS);
         fireproofJunglePlanksPool.slab(ModBlocks.FIREPROOF_JUNGLE_SLAB);
         fireproofJunglePlanksPool.fence(ModBlocks.FIREPROOF_JUNGLE_FENCE);
@@ -73,7 +101,6 @@ public class ModModelProvider extends FabricModelProvider {
         fireproofJunglePlanksPool.pressurePlate(ModBlocks.FIREPROOF_JUNGLE_PRESSURE_PLATE);
         fireproofJunglePlanksPool.button(ModBlocks.FIREPROOF_JUNGLE_BUTTON);
 
-        //  ACACIA
         fireproofAcaciaPlanksPool.stairs(ModBlocks.FIREPROOF_ACACIA_STAIRS);
         fireproofAcaciaPlanksPool.slab(ModBlocks.FIREPROOF_ACACIA_SLAB);
         fireproofAcaciaPlanksPool.fence(ModBlocks.FIREPROOF_ACACIA_FENCE);
@@ -81,7 +108,6 @@ public class ModModelProvider extends FabricModelProvider {
         fireproofAcaciaPlanksPool.pressurePlate(ModBlocks.FIREPROOF_ACACIA_PRESSURE_PLATE);
         fireproofAcaciaPlanksPool.button(ModBlocks.FIREPROOF_ACACIA_BUTTON);
 
-        //  MANGROVE
         fireproofMangrovePlanksPool.stairs(ModBlocks.FIREPROOF_MANGROVE_STAIRS);
         fireproofMangrovePlanksPool.slab(ModBlocks.FIREPROOF_MANGROVE_SLAB);
         fireproofMangrovePlanksPool.fence(ModBlocks.FIREPROOF_MANGROVE_FENCE);
@@ -89,7 +115,6 @@ public class ModModelProvider extends FabricModelProvider {
         fireproofMangrovePlanksPool.pressurePlate(ModBlocks.FIREPROOF_MANGROVE_PRESSURE_PLATE);
         fireproofMangrovePlanksPool.button(ModBlocks.FIREPROOF_MANGROVE_BUTTON);
 
-        //  CHERRY
         fireproofCherryPlanksPool.stairs(ModBlocks.FIREPROOF_CHERRY_STAIRS);
         fireproofCherryPlanksPool.slab(ModBlocks.FIREPROOF_CHERRY_SLAB);
         fireproofCherryPlanksPool.fence(ModBlocks.FIREPROOF_CHERRY_FENCE);
@@ -97,7 +122,6 @@ public class ModModelProvider extends FabricModelProvider {
         fireproofCherryPlanksPool.pressurePlate(ModBlocks.FIREPROOF_CHERRY_PRESSURE_PLATE);
         fireproofCherryPlanksPool.button(ModBlocks.FIREPROOF_CHERRY_BUTTON);
 
-        //  BAMBOO
         fireproofBambooPlanksPool.stairs(ModBlocks.FIREPROOF_BAMBOO_STAIRS);
         fireproofBambooPlanksPool.slab(ModBlocks.FIREPROOF_BAMBOO_SLAB);
         fireproofBambooPlanksPool.fence(ModBlocks.FIREPROOF_BAMBOO_FENCE);
@@ -105,7 +129,7 @@ public class ModModelProvider extends FabricModelProvider {
         fireproofBambooPlanksPool.pressurePlate(ModBlocks.FIREPROOF_BAMBOO_PRESSURE_PLATE);
         fireproofBambooPlanksPool.button(ModBlocks.FIREPROOF_BAMBOO_BUTTON);
 
-        //  BIRCH
+
         fireproofBirchPlanksPool.stairs(ModBlocks.FIREPROOF_BIRCH_STAIRS);
         fireproofBirchPlanksPool.slab(ModBlocks.FIREPROOF_BIRCH_SLAB);
         fireproofBirchPlanksPool.fence(ModBlocks.FIREPROOF_BIRCH_FENCE);
@@ -114,7 +138,6 @@ public class ModModelProvider extends FabricModelProvider {
         fireproofBirchPlanksPool.button(ModBlocks.FIREPROOF_BIRCH_BUTTON);
 
 
-        //  LOGS, PLANKS AND WOOD BLOCKS
         registerLogPair(blockStateModelGenerator,
                 ModBlocks.FIREPROOF_OAK_LOG,
                 ModBlocks.FIREPROOF_OAK_WOOD,
@@ -181,16 +204,15 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.EMERALD_DUST, Models.GENERATED);
 
 
-        itemModelGenerator.register(ModItems.COPPER_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.COPPER_AXE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.COPPER_PICKAXE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.COPPER_SHOVEL, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.COPPER_HOE, Models.HANDHELD);
+//        itemModelGenerator.register(ModItems.COPPER_SWORD, Models.HANDHELD);
+//        itemModelGenerator.register(ModItems.COPPER_AXE, Models.HANDHELD);
+//        itemModelGenerator.register(ModItems.COPPER_PICKAXE, Models.HANDHELD);
+//        itemModelGenerator.register(ModItems.COPPER_SHOVEL, Models.HANDHELD);
+//        itemModelGenerator.register(ModItems.COPPER_HOE, Models.HANDHELD);
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.COPPER_HELMET));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.COPPER_CHESTPLATE));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.COPPER_LEGGINGS));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.COPPER_BOOTS));
-
 
     }
 }

@@ -155,6 +155,7 @@ import net.minecraft.util.Identifier;
                 entries.addAfter(ModItems.COPPER_AXE, ModItems.COPPER_HOE);
                     });
 
+            //ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> entries.addAfter(Items.SHIELD, ModItems.AMETHYST_SHIELD));
 
             BetterVanilla.LOGGER.info("Registering Item groups for " + BetterVanilla.MOD_ID);
         }

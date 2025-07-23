@@ -7,6 +7,29 @@
   "item.bettervanilla.amethyst_dust": "Amethyst Dust",
   "item.bettervanilla.gold_dust": "Gold Dust",
 
+  "block.bettervanilla.amethyst_bricks": "Amethyst Bricks",
+  "block.bettervanilla.cracked_amethyst_bricks": "Cracked Amethyst Bricks",
+  "block.bettervanilla.chiseled_amethyst_block": "Chiseled Amethyst Block",
+  "block.bettervanilla.amethyst_pillar": "Pillar Amethyst",
+  "block.bettervanilla.amethyst_brick_stairs": "Amethyst Brick Stairs",
+  "block.bettervanilla.amethyst_brick_slab": "Amethyst Brick Slab",
+  "block.bettervanilla.amethyst_brick_wall": "Amethyst Brick Wall",
+  "block.bettervanilla.amethyst_door": "Amethyst Door",
+  "block.bettervanilla.amethyst_trapdoor": "Amethyst Trapdoor",
+  "block.bettervanilla.amethyst_lamp": "Amethyst Lamp",
+  "item.bettervanilla.amethyst_shield": "Amethyst Shield",
+
+  "block.bettervanilla.spruce_crafting_table": "Crafting Table",
+  "block.bettervanilla.dark_oak_crafting_table": "Crafting Table",
+  "block.bettervanilla.jungle_crafting_table": "Crafting Table",
+  "block.bettervanilla.acacia_crafting_table": "Crafting Table",
+  "block.bettervanilla.cherry_crafting_table": "Crafting Table",
+  "block.bettervanilla.mangrove_crafting_table": "Crafting Table",
+  "block.bettervanilla.crimson_crafting_table": "Crafting Table",
+  "block.bettervanilla.warped_crafting_table": "Crafting Table",
+  "block.bettervanilla.bamboo_crafting_table": "Crafting Table",
+  "block.bettervanilla.birch_crafting_table": "Crafting Table",
+
   "block.bettervanilla.fireproof_oak_log": "Fireproof Oak Log",
   "block.bettervanilla.fireproof_oak_wood": "Fireproof Oak Wood",
   "block.bettervanilla.fireproof_stripped_oak_log": "Fireproof Stripped Oak Log",
@@ -141,6 +164,5 @@
   "item.bettervanilla.copper_helmet": "Copper Helmet",
   "item.bettervanilla.copper_chestplate": "Copper Chestplate",
   "item.bettervanilla.copper_leggings": "Copper Leggings",
-  "item.bettervanilla.copper_boots": "Copper Boots",
-  "effect.bettervanilla.rust": "Rust"
+  "item.bettervanilla.copper_boots": "Copper Boots"
 }

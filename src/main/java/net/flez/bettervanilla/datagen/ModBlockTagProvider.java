@@ -190,6 +190,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.FIREPROOF_BIRCH_PRESSURE_PLATE)
                 .add(ModBlocks.FIREPROOF_BIRCH_BUTTON);
 
+
         getOrCreateTagBuilder(BlockTags.FENCES)
                 .add(ModBlocks.FIREPROOF_OAK_FENCE)
                 .add(ModBlocks.FIREPROOF_SPRUCE_FENCE)
@@ -212,8 +213,26 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.FIREPROOF_BAMBOO_FENCE_GATE)
                 .add(ModBlocks.FIREPROOF_BIRCH_FENCE_GATE);
 
+        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(ModBlocks.AMETHYST_BRICKS)
+                .add(ModBlocks.CRACKED_AMETHYST_BRICKS)
+                .add(ModBlocks.CHISELED_AMETHYST_BLOCK)
+                .add(ModBlocks.AMETHYST_PILLAR)
+                .add(ModBlocks.AMETHYST_BRICK_STAIRS)
+                .add(ModBlocks.AMETHYST_BRICK_SLAB)
+                .add(ModBlocks.AMETHYST_BRICK_WALL)
+                .add(ModBlocks.AMETHYST_DOOR)
+                .add(ModBlocks.AMETHYST_TRAPDOOR)
+                .add(ModBlocks.AMETHYST_LAMP);
+
+        getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(ModBlocks.AMETHYST_BRICK_WALL);
+
         getOrCreateTagBuilder(ModTags.Blocks.NEEDS_COPPER_TOOL)
                 .forceAddTag(BlockTags.INCORRECT_FOR_STONE_TOOL);
+
+        getOrCreateTagBuilder(ModTags.Blocks.CREEPER_AVOIDANCE)
+                .add(ModBlocks.AMETHYST_LAMP);
 
     }
 }

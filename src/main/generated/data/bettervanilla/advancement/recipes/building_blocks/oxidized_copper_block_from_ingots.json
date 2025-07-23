@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "vanillaplus:oxidized_copper_block_from_ingots"
+        "recipe": "bettervanilla:oxidized_copper_block_from_ingots"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "vanillaplus:oxidized_copper_block_from_ingots"
+      "bettervanilla:oxidized_copper_block_from_ingots"
     ]
   }
 }

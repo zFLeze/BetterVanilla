@@ -8,6 +8,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
+    //public static final Item AMETHYST_SHIELD = registerItem("amethyst_shield",
+            //new FabricShieldItem(new Item.Settings().maxCount(1).maxDamage(350), 5, 0, Items.AMETHYST_SHARD, Items.OAK_PLANKS));
 
     public static final Item COPPER_DUST = registerItem("copper_dust", new Item(new Item.Settings()));
     public static final Item OXIDIZED_COPPER_DUST = registerItem("oxidized_copper_dust", new Item(new Item.Settings()));
@@ -28,7 +30,7 @@ public class ModItems {
                             ModToolMaterials.COPPER, 1.5f, -2.8f))));
 
     public static final Item COPPER_AXE = registerItem("copper_axe",
-            new ShovelItem(ModToolMaterials.COPPER, new Item.Settings().attributeModifiers(
+            new AxeItem(ModToolMaterials.COPPER, new Item.Settings().attributeModifiers(
                     AxeItem.createAttributeModifiers(
                             ModToolMaterials.COPPER, 6.5f, -3.1f))));
 
@@ -38,9 +40,10 @@ public class ModItems {
                             ModToolMaterials.COPPER, 1.5f, -2.8f))));
 
     public static final Item COPPER_HOE = registerItem("copper_hoe",
-            new ShovelItem(ModToolMaterials.COPPER, new Item.Settings().attributeModifiers(
+            new HoeItem(ModToolMaterials.COPPER, new Item.Settings().attributeModifiers(
                     HoeItem.createAttributeModifiers(
                             ModToolMaterials.COPPER, -1.5f, -1.0f))));
+
 
     public static final Item COPPER_HELMET = registerItem("copper_helmet",
             new ArmorItem(ModArmorMaterials.COPPER_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()

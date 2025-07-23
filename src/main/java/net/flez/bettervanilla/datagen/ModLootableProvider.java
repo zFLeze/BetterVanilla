@@ -14,6 +14,28 @@ public class ModLootableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        addDrop(ModBlocks.AMETHYST_BRICKS);
+        addDrop(ModBlocks.CRACKED_AMETHYST_BRICKS);
+        addDrop(ModBlocks.AMETHYST_PILLAR);
+        addDrop(ModBlocks.CHISELED_AMETHYST_BLOCK);
+        addDrop(ModBlocks.AMETHYST_BRICK_STAIRS);
+        addDrop(ModBlocks.AMETHYST_BRICK_SLAB, slabDrops(ModBlocks.AMETHYST_BRICK_SLAB));
+        addDrop(ModBlocks.AMETHYST_BRICK_WALL);
+        addDrop(ModBlocks.AMETHYST_DOOR, doorDrops(ModBlocks.AMETHYST_DOOR));
+        addDrop(ModBlocks.AMETHYST_TRAPDOOR);
+        addDrop(ModBlocks.AMETHYST_LAMP);
+
+        addDrop(ModBlocks.SPRUCE_CRAFTING_TABLE);
+        addDrop(ModBlocks.DARK_OAK_CRAFTING_TABLE);
+        addDrop(ModBlocks.CHERRY_CRAFTING_TABLE);
+        addDrop(ModBlocks.MANGROVE_CRAFTING_TABLE);
+        addDrop(ModBlocks.ACACIA_CRAFTING_TABLE);
+        addDrop(ModBlocks.JUNGLE_CRAFTING_TABLE);
+        addDrop(ModBlocks.CRIMSON_CRAFTING_TABLE);
+        addDrop(ModBlocks.WARPED_CRAFTING_TABLE);
+        addDrop(ModBlocks.BAMBOO_CRAFTING_TABLE);
+        addDrop(ModBlocks.BIRCH_CRAFTING_TABLE);
+
         addDrop(ModBlocks.FIREPROOF_OAK_PLANKS);
         addDrop(ModBlocks.FIREPROOF_OAK_LOG);
         addDrop(ModBlocks.FIREPROOF_OAK_WOOD);

@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "vanillaplus:name_tag"
+        "recipe": "bettervanilla:name_tag"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "vanillaplus:name_tag"
+      "bettervanilla:name_tag"
     ]
   }
 }

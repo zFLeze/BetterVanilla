@@ -1,21 +1,25 @@
 {
-	"required": true,
-	"package": "net.flez.bettervanilla.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"ChangeStackabilityMixin",
-		"PracticeMixin",
-		"ExampleMixin",
-		"BounceArrowMixin",
-		"BounceEggMixin",
-		"BounceEnderPearlMixin",
-		"BounceExperienceBottleMixin",
-		"BouncePotionsMixin",
-		"BounceSnowballMixin",
-		"BounceSpectralArrowMixin",
-		"BounceWindChargeMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "net.flez.bettervanilla.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BounceArrowMixin",
+    "BounceEggMixin",
+    "BounceEnderPearlMixin",
+    "BounceExperienceBottleMixin",
+    "BouncePotionsMixin",
+    "BounceSnowballMixin",
+    "BounceSpectralArrowMixin",
+    "BounceWindChargeMixin",
+    "ChangeStackabilityMixin",
+    "CreeperEntityMixin",
+    "MobEntityAccessor",
+    "SnowballDamageMixin",
+    "CactusBlockMixin",
+    "FarmlandBlockMixin",
+    "BerryBushMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

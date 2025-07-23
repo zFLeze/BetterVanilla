@@ -3,6 +3,8 @@ package net.flez.bettervanilla;
 import net.flez.bettervanilla.datagen.*;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.minecraft.registry.RegistryBuilder;
+import net.minecraft.registry.RegistryKeys;
 
 public class BetterVanillaDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -13,5 +15,10 @@ public class BetterVanillaDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModLootableProvider::new);
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
+		pack.addProvider(ModRegistryDataGenerator::new);
+	}
+
+	@Override
+	public void buildRegistry(RegistryBuilder registryBuilder) {
 	}
 }
