@@ -3,13 +3,12 @@ package net.flez.bettervanilla.event;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.flez.bettervanilla.entity.ModEntities;
 import net.flez.bettervanilla.entity.custom.CustomBlockSitEntity;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.CampfireBlock;
-import net.minecraft.block.CandleBlock;
-import net.minecraft.block.TntBlock;
+import net.minecraft.block.*;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
@@ -33,18 +32,20 @@ public class ModEvents {
             BlockPos above2 = pos.up(2);
             BlockState stateAbove1 = world.getBlockState(above1);
             BlockState stateAbove2 = world.getBlockState(above2);
+            BlockPos playerDown = player.getBlockPos().down();
+            BlockState below = player.getWorld().getBlockState(playerDown);
 
-            if (!world.isClient && (state.isIn(SITTABLE_STAIRS) || state.isIn(SITTABLE_LOGS))) {
+            if (!world.isClient && player.getMainHandStack().getItem() instanceof Item && !(player.getMainHandStack().getItem() instanceof BlockItem) && (state.isIn(SITTABLE_STAIRS) || state.isIn(SITTABLE_LOGS))) {
+
                 double yOffset = state.isIn(SITTABLE_STAIRS) ? 0.57 : 1.07;
-
-                if (!stateAbove1.isAir() || stateAbove1.isOpaqueFullCube(world, above1) && stateAbove2.isAir() || stateAbove2.isOpaqueFullCube(world, above2))
+                if (!stateAbove1.isAir() || (stateAbove1.isOpaqueFullCube(world, above1) && stateAbove2.isAir()) || stateAbove2.isOpaqueFullCube(world, above2))
                     return ActionResult.PASS;
 
                 if (!world.getEntitiesByType(ModEntities.SIT_ENTITY, new Box(pos), e -> true).isEmpty()) {
                     return ActionResult.PASS;
                 }
 
-                if (player.isSneaking() || player.getMainHandStack() == null)
+                if (player.isSneaking())
                     return ActionResult.PASS;
 
                 CustomBlockSitEntity seat = new CustomBlockSitEntity(ModEntities.SIT_ENTITY, world);

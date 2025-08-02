@@ -32,7 +32,7 @@ public class ModModelPredicates {
                     Integer stage = stack.get(ModDataComponents.OXIDATION_STAGE);
                     if (stage == null) stage = 0;
 
-                    if (stage < 3 && player.getWorld().random.nextFloat() < 0.0025) {
+                    if (stage < 3 && player.getWorld().random.nextFloat() < (1.0f / 20000.0f)) {
                         stack.set(ModDataComponents.OXIDATION_STAGE, stage + 1);
                     }
 

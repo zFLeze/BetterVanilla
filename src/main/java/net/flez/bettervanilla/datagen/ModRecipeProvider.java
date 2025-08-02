@@ -217,21 +217,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModBlocks.AMETHYST_BRICKS.asItem()), conditionsFromItem(ModBlocks.AMETHYST_BRICKS.asItem()))
                 .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "crafted_amethyst_slab"));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_BRICK_STAIRS, 3)
-                        .pattern("A  ")
-                        .pattern("AA ")
-                        .pattern("   ")
-                .input('A', ModBlocks.AMETHYST_BRICKS)
-                .criterion(hasItem(ModBlocks.AMETHYST_BRICKS.asItem()), conditionsFromItem(ModBlocks.AMETHYST_BRICKS.asItem()))
-                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "crafted_amethyst_stairs"));
-
         offerWallRecipe(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_BRICK_WALL, ModBlocks.AMETHYST_BRICKS);
-
         offerStonecuttingRecipe(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_BRICKS, Blocks.AMETHYST_BLOCK);
         offerStonecuttingRecipe(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_BRICK_SLAB, ModBlocks.AMETHYST_BRICKS, 2);
         offerStonecuttingRecipe(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_AMETHYST_BLOCK, ModBlocks.AMETHYST_BRICKS);
         offerStonecuttingRecipe(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_BRICK_STAIRS, ModBlocks.AMETHYST_BRICKS);
         offerStonecuttingRecipe(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_PILLAR, ModBlocks.AMETHYST_BRICKS);
+        offerStonecuttingRecipe(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_TRAPDOOR, ModBlocks.AMETHYST_BRICKS, 4);
         offerSmelting(recipeExporter, List.of((ModBlocks.AMETHYST_BRICKS.asItem())), RecipeCategory.BUILDING_BLOCKS,
                 ModBlocks.CRACKED_AMETHYST_BRICKS.asItem(), 0.5f, 200, "cracked_amethyst_bricks");
 
@@ -312,146 +304,513 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Blocks.WARPED_PLANKS), conditionsFromItem(Blocks.WARPED_PLANKS))
                 .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "warped_crafting_table"));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, Items.STONE_PICKAXE)
+                .pattern("SSS")
+                .pattern(" I ")
+                .pattern(" I ")
+                .input('S', Items.STONE)
+                .input('I', Items.STICK)
+                .criterion(hasItem(Items.STONE), conditionsFromItem(Items.STONE))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "stone_pickaxe"));
 
 
 
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.OAK_STAIRS, 3)
-                .pattern("P  ")
-                .pattern("PP ")
-                .pattern("   ")
-                .input('P', Items.OAK_PLANKS)
-                .criterion(hasItem(Items.OAK_PLANKS), conditionsFromItem(Items.OAK_PLANKS))
-                .offerTo(recipeExporter, Identifier.of("minecraft", "oak_stairs"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.SPRUCE_STAIRS, 3)
-                .pattern("P  ")
-                .pattern("PP ")
-                .pattern("   ")
-                .input('P', Items.SPRUCE_PLANKS)
-                .criterion(hasItem(Items.SPRUCE_PLANKS), conditionsFromItem(Items.SPRUCE_PLANKS))
-                .offerTo(recipeExporter, Identifier.of("minecraft", "spruce_stairs"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.DARK_OAK_STAIRS, 3)
-                .pattern("P  ")
-                .pattern("PP ")
-                .pattern("   ")
-                .input('P', Items.DARK_OAK_PLANKS)
-                .criterion(hasItem(Items.DARK_OAK_PLANKS), conditionsFromItem(Items.DARK_OAK_PLANKS))
-                .offerTo(recipeExporter, Identifier.of("minecraft", "dark_oak_stairs"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.JUNGLE_STAIRS, 3)
-                .pattern("P  ")
-                .pattern("PP ")
-                .pattern("   ")
-                .input('P', Items.JUNGLE_PLANKS)
-                .criterion(hasItem(Items.JUNGLE_PLANKS), conditionsFromItem(Items.JUNGLE_PLANKS))
-                .offerTo(recipeExporter, Identifier.of("minecraft", "jungle_stairs"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.ACACIA_STAIRS, 3)
-                .pattern("P  ")
-                .pattern("PP ")
-                .pattern("   ")
-                .input('P', Items.ACACIA_PLANKS)
-                .criterion(hasItem(Items.ACACIA_PLANKS), conditionsFromItem(Items.ACACIA_PLANKS))
-                .offerTo(recipeExporter, Identifier.of("minecraft", "acacia_stairs"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.MANGROVE_STAIRS, 3)
-                .pattern("P  ")
-                .pattern("PP ")
-                .pattern("   ")
-                .input('P', Items.MANGROVE_PLANKS)
-                .criterion(hasItem(Items.MANGROVE_PLANKS), conditionsFromItem(Items.MANGROVE_PLANKS))
-                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "mangrove_stairs"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.CHERRY_STAIRS, 3)
-                .pattern("P  ")
-                .pattern("PP ")
-                .pattern("   ")
-                .input('P', Items.CHERRY_PLANKS)
-                .criterion(hasItem(Items.CHERRY_PLANKS), conditionsFromItem(Items.CHERRY_PLANKS))
-                .offerTo(recipeExporter, Identifier.of("minecraft", "cherry_stairs"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.BAMBOO_STAIRS, 3)
-                .pattern("P  ")
-                .pattern("PP ")
-                .pattern("   ")
-                .input('P', Items.BAMBOO_PLANKS)
-                .criterion(hasItem(Items.BAMBOO_PLANKS), conditionsFromItem(Items.BAMBOO_PLANKS))
-                .offerTo(recipeExporter, Identifier.of("minecraft", "bamboo_stairs"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.BIRCH_STAIRS, 3)
-                .pattern("P  ")
-                .pattern("PP ")
-                .pattern("   ")
-                .input('P', Items.BIRCH_PLANKS)
-                .criterion(hasItem(Items.BIRCH_PLANKS), conditionsFromItem(Items.BIRCH_PLANKS))
-                .offerTo(recipeExporter, Identifier.of("minecraft", "birch_stairs"));
-
-
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.OAK_TRAPDOOR, 8)
-                .pattern("PPP")
-                .pattern("PPP")
-                .input('P', Items.OAK_PLANKS)
-                .criterion(hasItem(Items.OAK_PLANKS), conditionsFromItem(Items.OAK_PLANKS))
-                .offerTo(recipeExporter, Identifier.of("minecraft", "oak_trapdoor"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.SPRUCE_TRAPDOOR, 8)
-                .pattern("PPP")
-                .pattern("PPP")
-                .input('P', Items.SPRUCE_PLANKS)
-                .criterion(hasItem(Items.SPRUCE_PLANKS), conditionsFromItem(Items.SPRUCE_PLANKS))
-                .offerTo(recipeExporter, Identifier.of("minecraft", "spruce_trapdoor"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.DARK_OAK_TRAPDOOR, 8)
-                .pattern("PPP")
-                .pattern("PPP")
-                .input('P', Items.DARK_OAK_PLANKS)
-                .criterion(hasItem(Items.DARK_OAK_PLANKS), conditionsFromItem(Items.DARK_OAK_PLANKS))
-                .offerTo(recipeExporter, Identifier.of("minecraft", "dark_oak_trapdoor"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.JUNGLE_TRAPDOOR, 8)
-                .pattern("PPP")
-                .pattern("PPP")
-                .input('P', Items.JUNGLE_PLANKS)
-                .criterion(hasItem(Items.JUNGLE_PLANKS), conditionsFromItem(Items.JUNGLE_PLANKS))
-                .offerTo(recipeExporter, Identifier.of("minecraft", "jungle_trapdoor"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.ACACIA_TRAPDOOR, 8)
-                .pattern("PPP")
-                .pattern("PPP")
-                .input('P', Items.ACACIA_PLANKS)
-                .criterion(hasItem(Items.ACACIA_PLANKS), conditionsFromItem(Items.ACACIA_PLANKS))
-                .offerTo(recipeExporter, Identifier.of("minecraft", "acacia_trapdoor"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.CHERRY_TRAPDOOR, 8)
-                .pattern("PPP")
-                .pattern("PPP")
-                .input('P', Items.CHERRY_PLANKS)
-                .criterion(hasItem(Items.CHERRY_PLANKS), conditionsFromItem(Items.CHERRY_PLANKS))
-                .offerTo(recipeExporter, Identifier.of("minecraft", "cherry_trapdoor"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.MANGROVE_TRAPDOOR, 8)
-                .pattern("PPP")
-                .pattern("PPP")
-                .input('P', Items.MANGROVE_PLANKS)
-                .criterion(hasItem(Items.MANGROVE_PLANKS), conditionsFromItem(Items.MANGROVE_PLANKS))
-                .offerTo(recipeExporter, Identifier.of("minecraft", "mangrove_trapdoor"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.BAMBOO_TRAPDOOR, 8)
-                .pattern("PPP")
-                .pattern("PPP")
-                .input('P', Items.BAMBOO_PLANKS)
-                .criterion(hasItem(Items.BAMBOO_PLANKS), conditionsFromItem(Items.BAMBOO_PLANKS))
-                .offerTo(recipeExporter, Identifier.of("minecraft", "bamboo_trapdoor"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.BIRCH_TRAPDOOR, 8)
-                .pattern("PPP")
-                .pattern("PPP")
-                .input('P', Items.BIRCH_PLANKS)
-                .criterion(hasItem(Items.BIRCH_PLANKS), conditionsFromItem(Items.BIRCH_PLANKS))
-                .offerTo(recipeExporter, Identifier.of("minecraft", "birch_trapdoor"));
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.OAK_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.OAK_PLANKS)
+//                .criterion(hasItem(Items.OAK_PLANKS), conditionsFromItem(Items.OAK_PLANKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "oak_stairs"));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.SPRUCE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.SPRUCE_PLANKS)
+//                .criterion(hasItem(Items.SPRUCE_PLANKS), conditionsFromItem(Items.SPRUCE_PLANKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "spruce_stairs"));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.DARK_OAK_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.DARK_OAK_PLANKS)
+//                .criterion(hasItem(Items.DARK_OAK_PLANKS), conditionsFromItem(Items.DARK_OAK_PLANKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "dark_oak_stairs"));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.JUNGLE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.JUNGLE_PLANKS)
+//                .criterion(hasItem(Items.JUNGLE_PLANKS), conditionsFromItem(Items.JUNGLE_PLANKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "jungle_stairs"));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.ACACIA_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.ACACIA_PLANKS)
+//                .criterion(hasItem(Items.ACACIA_PLANKS), conditionsFromItem(Items.ACACIA_PLANKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "acacia_stairs"));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.MANGROVE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.MANGROVE_PLANKS)
+//                .criterion(hasItem(Items.MANGROVE_PLANKS), conditionsFromItem(Items.MANGROVE_PLANKS))
+//                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "mangrove_stairs"));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.CHERRY_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.CHERRY_PLANKS)
+//                .criterion(hasItem(Items.CHERRY_PLANKS), conditionsFromItem(Items.CHERRY_PLANKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "cherry_stairs"));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.BAMBOO_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.BAMBOO_PLANKS)
+//                .criterion(hasItem(Items.BAMBOO_PLANKS), conditionsFromItem(Items.BAMBOO_PLANKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "bamboo_stairs"));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.BIRCH_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.BIRCH_PLANKS)
+//                .criterion(hasItem(Items.BIRCH_PLANKS), conditionsFromItem(Items.BIRCH_PLANKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "birch_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.STONE)
+//                .criterion(hasItem(Items.STONE), conditionsFromItem(Items.STONE))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "stone_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.COBBLESTONE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.COBBLESTONE)
+//                .criterion(hasItem(Items.COBBLESTONE), conditionsFromItem(Items.COBBLESTONE))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "cobblestone_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.MOSSY_COBBLESTONE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.MOSSY_COBBLESTONE)
+//                .criterion(hasItem(Items.MOSSY_COBBLESTONE), conditionsFromItem(Items.MOSSY_COBBLESTONE))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "mossy_cobblestone_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_BRICK_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.STONE_BRICK_STAIRS)
+//                .criterion(hasItem(Items.STONE_BRICKS), conditionsFromItem(Items.STONE_BRICKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "stone_brick_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.MOSSY_STONE_BRICK_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.MOSSY_STONE_BRICKS)
+//                .criterion(hasItem(Items.MOSSY_STONE_BRICKS), conditionsFromItem(Items.MOSSY_STONE_BRICKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "mossy_stone_brick_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.ANDESITE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.ANDESITE)
+//                .criterion(hasItem(Items.ANDESITE), conditionsFromItem(Items.ANDESITE))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "andesite_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.POLISHED_ANDESITE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.POLISHED_ANDESITE)
+//                .criterion(hasItem(Items.POLISHED_ANDESITE), conditionsFromItem(Items.POLISHED_ANDESITE))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "polished_andesite_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.DIORITE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.DIORITE)
+//                .criterion(hasItem(Items.DIORITE), conditionsFromItem(Items.DIORITE))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "diorite_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.POLISHED_DIORITE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.POLISHED_DIORITE)
+//                .criterion(hasItem(Items.POLISHED_DIORITE), conditionsFromItem(Items.POLISHED_DIORITE))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "polished_diorite_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.GRANITE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.GRANITE)
+//                .criterion(hasItem(Items.GRANITE), conditionsFromItem(Items.GRANITE))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "granite_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.POLISHED_GRANITE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.POLISHED_GRANITE)
+//                .criterion(hasItem(Items.POLISHED_GRANITE), conditionsFromItem(Items.POLISHED_GRANITE))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "polished_granite_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.SANDSTONE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.SANDSTONE)
+//                .criterion(hasItem(Items.SANDSTONE), conditionsFromItem(Items.SANDSTONE))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "sandstone_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.SMOOTH_SANDSTONE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.SMOOTH_SANDSTONE)
+//                .criterion(hasItem(Items.SMOOTH_SANDSTONE), conditionsFromItem(Items.SMOOTH_SANDSTONE))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "smooth_sandstone_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.RED_SANDSTONE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.RED_SANDSTONE)
+//                .criterion(hasItem(Items.RED_SANDSTONE), conditionsFromItem(Items.RED_SANDSTONE))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "red_sandstone_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.SMOOTH_RED_SANDSTONE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.SMOOTH_RED_SANDSTONE)
+//                .criterion(hasItem(Items.SMOOTH_RED_SANDSTONE), conditionsFromItem(Items.SMOOTH_RED_SANDSTONE))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "smooth_red_sandstone_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.QUARTZ_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.QUARTZ_BLOCK)
+//                .criterion(hasItem(Items.QUARTZ_BLOCK), conditionsFromItem(Items.QUARTZ_BLOCK))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "quartz_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.SMOOTH_QUARTZ_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.SMOOTH_QUARTZ)
+//                .criterion(hasItem(Items.SMOOTH_QUARTZ), conditionsFromItem(Items.SMOOTH_QUARTZ))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "smooth_quartz_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.BRICK_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.BRICKS)
+//                .criterion(hasItem(Items.BRICKS), conditionsFromItem(Items.BRICKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "bricks_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.MUD_BRICK_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.MUD_BRICKS)
+//                .criterion(hasItem(Items.MUD_BRICKS), conditionsFromItem(Items.MUD_BRICKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "mud_bricks_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.TUFF_BRICK_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.TUFF_BRICKS)
+//                .criterion(hasItem(Items.TUFF_BRICKS), conditionsFromItem(Items.TUFF_BRICKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "tuff_bricks_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.POLISHED_TUFF_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.POLISHED_TUFF)
+//                .criterion(hasItem(Items.POLISHED_TUFF), conditionsFromItem(Items.POLISHED_TUFF))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "polished_tuff_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.NETHER_BRICK_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.NETHER_BRICKS)
+//                .criterion(hasItem(Items.NETHER_BRICKS), conditionsFromItem(Items.NETHER_BRICKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "nether_bricks_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.RED_NETHER_BRICK_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.RED_NETHER_BRICKS)
+//                .criterion(hasItem(Items.RED_NETHER_BRICKS), conditionsFromItem(Items.RED_NETHER_BRICKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "red_nether_brick_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.BLACKSTONE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.BLACKSTONE)
+//                .criterion(hasItem(Items.BLACKSTONE), conditionsFromItem(Items.BLACKSTONE))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "blackstone_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.POLISHED_BLACKSTONE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.POLISHED_BLACKSTONE)
+//                .criterion(hasItem(Items.POLISHED_BLACKSTONE), conditionsFromItem(Items.POLISHED_BLACKSTONE))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "polished_blackstone_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.POLISHED_BLACKSTONE_BRICK_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.POLISHED_BLACKSTONE_BRICKS)
+//                .criterion(hasItem(Items.POLISHED_BLACKSTONE_BRICKS), conditionsFromItem(Items.POLISHED_BLACKSTONE_BRICKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "polished_blackstone_bricks_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.COBBLED_DEEPSLATE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.COBBLED_DEEPSLATE)
+//                .criterion(hasItem(Items.COBBLED_DEEPSLATE), conditionsFromItem(Items.COBBLED_DEEPSLATE))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "cobbled_deepslate_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.DEEPSLATE_BRICK_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.DEEPSLATE_BRICKS)
+//                .criterion(hasItem(Items.DEEPSLATE_BRICKS), conditionsFromItem(Items.DEEPSLATE_BRICKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "deepslate_brick_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.POLISHED_DEEPSLATE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.POLISHED_DEEPSLATE)
+//                .criterion(hasItem(Items.POLISHED_DEEPSLATE), conditionsFromItem(Items.POLISHED_DEEPSLATE))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "polished_deepslate_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.DEEPSLATE_TILE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.DEEPSLATE_TILES)
+//                .criterion(hasItem(Items.DEEPSLATE_TILES), conditionsFromItem(Items.DEEPSLATE_TILES))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "deepslate_tile_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.CUT_COPPER_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.CUT_COPPER)
+//                .criterion(hasItem(Items.CUT_COPPER), conditionsFromItem(Items.CUT_COPPER))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "cut_copper_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.EXPOSED_CUT_COPPER_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.EXPOSED_CUT_COPPER)
+//                .criterion(hasItem(Items.EXPOSED_CUT_COPPER), conditionsFromItem(Items.EXPOSED_CUT_COPPER))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "exposed_copper_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.WEATHERED_CUT_COPPER_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.WEATHERED_CUT_COPPER)
+//                .criterion(hasItem(Items.WEATHERED_CUT_COPPER), conditionsFromItem(Items.WEATHERED_CUT_COPPER))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "weathered_cut_copper_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_CUT_COPPER_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.OXIDIZED_CUT_COPPER)
+//                .criterion(hasItem(Items.OXIDIZED_CUT_COPPER), conditionsFromItem(Items.OXIDIZED_CUT_COPPER))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "oxidized_cut_copper_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.WAXED_CUT_COPPER)
+//                .criterion(hasItem(Items.WAXED_CUT_COPPER), conditionsFromItem(Items.WAXED_CUT_COPPER))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "waxed_cut_copper_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.WAXED_EXPOSED_CUT_COPPER)
+//                .criterion(hasItem(Items.WAXED_EXPOSED_CUT_COPPER), conditionsFromItem(Items.WAXED_EXPOSED_CUT_COPPER))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "waxed_exposed_cut_copper_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.WAXED_WEATHERED_CUT_COPPER)
+//                .criterion(hasItem(Items.WAXED_WEATHERED_CUT_COPPER), conditionsFromItem(Items.WAXED_WEATHERED_CUT_COPPER))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "waxed_weathered_cut_copper_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.WAXED_OXIDIZED_CUT_COPPER)
+//                .criterion(hasItem(Items.WAXED_OXIDIZED_CUT_COPPER), conditionsFromItem(Items.WAXED_OXIDIZED_CUT_COPPER))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "waxed_oxidized_cut_copper_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.END_STONE_BRICK_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.END_STONE_BRICKS)
+//                .criterion(hasItem(Items.END_STONE_BRICKS), conditionsFromItem(Items.END_STONE_BRICKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "end_stone_brick_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.PRISMARINE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.PRISMARINE)
+//                .criterion(hasItem(Items.PRISMARINE), conditionsFromItem(Items.PRISMARINE))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "prismarine_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.DARK_PRISMARINE_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.DARK_PRISMARINE)
+//                .criterion(hasItem(Items.DARK_PRISMARINE), conditionsFromItem(Items.DARK_PRISMARINE))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "dark_prismarine_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.PRISMARINE_BRICK_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.PRISMARINE_BRICKS)
+//                .criterion(hasItem(Items.PRISMARINE_BRICKS), conditionsFromItem(Items.PRISMARINE_BRICKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "prismarine_brick_stairs"));
+//
+//         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.PURPUR_STAIRS, 3)
+//                .pattern("P  ")
+//                .pattern("PP ")
+//                .pattern("   ")
+//                .input('P', Items.PURPUR_BLOCK)
+//                .criterion(hasItem(Items.PURPUR_BLOCK), conditionsFromItem(Items.PURPUR_BLOCK))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "purpur_stairs"));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_BRICK_STAIRS, 3)
+//                .pattern("A  ")
+//                .pattern("AA ")
+//                .pattern("   ")
+//                .input('A', ModBlocks.AMETHYST_BRICKS)
+//                .criterion(hasItem(ModBlocks.AMETHYST_BRICKS.asItem()), conditionsFromItem(ModBlocks.AMETHYST_BRICKS.asItem()))
+//                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "crafted_amethyst_stairs"));
+//
+//
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.OAK_TRAPDOOR, 8)
+//                .pattern("PPP")
+//                .pattern("PPP")
+//                .input('P', Items.OAK_PLANKS)
+//                .criterion(hasItem(Items.OAK_PLANKS), conditionsFromItem(Items.OAK_PLANKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "oak_trapdoor"));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.SPRUCE_TRAPDOOR, 8)
+//                .pattern("PPP")
+//                .pattern("PPP")
+//                .input('P', Items.SPRUCE_PLANKS)
+//                .criterion(hasItem(Items.SPRUCE_PLANKS), conditionsFromItem(Items.SPRUCE_PLANKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "spruce_trapdoor"));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.DARK_OAK_TRAPDOOR, 8)
+//                .pattern("PPP")
+//                .pattern("PPP")
+//                .input('P', Items.DARK_OAK_PLANKS)
+//                .criterion(hasItem(Items.DARK_OAK_PLANKS), conditionsFromItem(Items.DARK_OAK_PLANKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "dark_oak_trapdoor"));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.JUNGLE_TRAPDOOR, 8)
+//                .pattern("PPP")
+//                .pattern("PPP")
+//                .input('P', Items.JUNGLE_PLANKS)
+//                .criterion(hasItem(Items.JUNGLE_PLANKS), conditionsFromItem(Items.JUNGLE_PLANKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "jungle_trapdoor"));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.ACACIA_TRAPDOOR, 8)
+//                .pattern("PPP")
+//                .pattern("PPP")
+//                .input('P', Items.ACACIA_PLANKS)
+//                .criterion(hasItem(Items.ACACIA_PLANKS), conditionsFromItem(Items.ACACIA_PLANKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "acacia_trapdoor"));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.CHERRY_TRAPDOOR, 8)
+//                .pattern("PPP")
+//                .pattern("PPP")
+//                .input('P', Items.CHERRY_PLANKS)
+//                .criterion(hasItem(Items.CHERRY_PLANKS), conditionsFromItem(Items.CHERRY_PLANKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "cherry_trapdoor"));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.MANGROVE_TRAPDOOR, 8)
+//                .pattern("PPP")
+//                .pattern("PPP")
+//                .input('P', Items.MANGROVE_PLANKS)
+//                .criterion(hasItem(Items.MANGROVE_PLANKS), conditionsFromItem(Items.MANGROVE_PLANKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "mangrove_trapdoor"));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.BAMBOO_TRAPDOOR, 8)
+//                .pattern("PPP")
+//                .pattern("PPP")
+//                .input('P', Items.BAMBOO_PLANKS)
+//                .criterion(hasItem(Items.BAMBOO_PLANKS), conditionsFromItem(Items.BAMBOO_PLANKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "bamboo_trapdoor"));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.BIRCH_TRAPDOOR, 8)
+//                .pattern("PPP")
+//                .pattern("PPP")
+//                .input('P', Items.BIRCH_PLANKS)
+//                .criterion(hasItem(Items.BIRCH_PLANKS), conditionsFromItem(Items.BIRCH_PLANKS))
+//                .offerTo(recipeExporter, Identifier.of("minecraft", "birch_trapdoor"));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_TRAPDOOR, 8)
+//                .pattern("PPP")
+//                .pattern("PPP")
+//                .input('P', ModBlocks.AMETHYST_BRICKS)
+//                .criterion(hasItem(ModBlocks.AMETHYST_BRICKS), conditionsFromItem(ModBlocks.AMETHYST_BRICKS))
+//                .offerTo(recipeExporter, Identifier.of(BetterVanilla.MOD_ID, "crafted_amethyst_trapdoor"));
 
 
 

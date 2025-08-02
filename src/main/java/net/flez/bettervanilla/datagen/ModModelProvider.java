@@ -72,6 +72,16 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeWithCustomTextures(ModBlocks.CRIMSON_CRAFTING_TABLE, Blocks.CRIMSON_PLANKS, TextureMap::frontSideWithCustomBottom);
         blockStateModelGenerator.registerCubeWithCustomTextures(ModBlocks.WARPED_CRAFTING_TABLE, Blocks.WARPED_PLANKS, TextureMap::frontSideWithCustomBottom);
 
+        blockStateModelGenerator.registerBuiltin(ModelIds.getBlockModelId(ModBlocks.SPRUCE_CHEST), Blocks.SPRUCE_PLANKS).includeWithoutItem(ModBlocks.SPRUCE_CHEST, ModBlocks.TRAPPED_SPRUCE_CHEST);
+        blockStateModelGenerator.registerBuiltin(ModelIds.getBlockModelId(ModBlocks.DARK_OAK_CHEST), Blocks.DARK_OAK_PLANKS).includeWithoutItem(ModBlocks.DARK_OAK_CHEST, ModBlocks.TRAPPED_DARK_OAK_CHEST);
+        blockStateModelGenerator.registerBuiltin(ModelIds.getBlockModelId(ModBlocks.JUNGLE_CHEST), Blocks.JUNGLE_PLANKS).includeWithoutItem(ModBlocks.JUNGLE_CHEST, ModBlocks.TRAPPED_JUNGLE_CHEST);
+        blockStateModelGenerator.registerBuiltin(ModelIds.getBlockModelId(ModBlocks.ACACIA_CHEST), Blocks.ACACIA_PLANKS).includeWithoutItem(ModBlocks.ACACIA_CHEST, ModBlocks.TRAPPED_ACACIA_CHEST);
+        blockStateModelGenerator.registerBuiltin(ModelIds.getBlockModelId(ModBlocks.MANGROVE_CHEST), Blocks.MANGROVE_PLANKS).includeWithoutItem(ModBlocks.MANGROVE_CHEST, ModBlocks.TRAPPED_MANGROVE_CHEST);
+        blockStateModelGenerator.registerBuiltin(ModelIds.getBlockModelId(ModBlocks.CHERRY_CHEST), Blocks.CHERRY_PLANKS).includeWithoutItem(ModBlocks.CHERRY_CHEST, ModBlocks.TRAPPED_CHERRY_CHEST);
+        blockStateModelGenerator.registerBuiltin(ModelIds.getBlockModelId(ModBlocks.BAMBOO_CHEST), Blocks.BAMBOO_PLANKS).includeWithoutItem(ModBlocks.BAMBOO_CHEST, ModBlocks.TRAPPED_BAMBOO_CHEST);
+        blockStateModelGenerator.registerBuiltin(ModelIds.getBlockModelId(ModBlocks.BIRCH_CHEST), Blocks.BIRCH_PLANKS).includeWithoutItem(ModBlocks.BIRCH_CHEST, ModBlocks.TRAPPED_BIRCH_CHEST);
+        blockStateModelGenerator.registerBuiltin(ModelIds.getBlockModelId(ModBlocks.CRIMSON_CHEST), Blocks.CRIMSON_PLANKS).includeWithoutItem(ModBlocks.CRIMSON_CHEST, ModBlocks.TRAPPED_CRIMSON_CHEST);
+        blockStateModelGenerator.registerBuiltin(ModelIds.getBlockModelId(ModBlocks.WARPED_CHEST), Blocks.WARPED_PLANKS).includeWithoutItem(ModBlocks.WARPED_CHEST, ModBlocks.TRAPPED_WARPED_CHEST);
 
         fireproofOakPlanksPool.stairs(ModBlocks.FIREPROOF_OAK_STAIRS);
         fireproofOakPlanksPool.slab(ModBlocks.FIREPROOF_OAK_SLAB);
@@ -213,6 +223,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.COPPER_CHESTPLATE));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.COPPER_LEGGINGS));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.COPPER_BOOTS));
+
 
     }
 }

@@ -18,6 +18,7 @@ import java.util.concurrent.CompletableFuture;
 public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     public static final TagKey<Block> SITTABLE_STAIRS = TagKey.of(RegistryKeys.BLOCK, Identifier.of(BetterVanilla.MOD_ID, "sittable_stairs"));
     public static final TagKey<Block> SITTABLE_LOGS = TagKey.of(RegistryKeys.BLOCK, Identifier.of(BetterVanilla.MOD_ID, "sittable_logs"));
+    public static final TagKey<Block> CRAFTING_TABLES = TagKey.of(RegistryKeys.BLOCK, Identifier.of(BetterVanilla.MOD_ID, "crafting_tables"));
 
     public ModBlockTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
@@ -233,6 +234,19 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(ModTags.Blocks.CREEPER_AVOIDANCE)
                 .add(ModBlocks.AMETHYST_LAMP);
+
+        getOrCreateTagBuilder(CRAFTING_TABLES)
+                .add(ModBlocks.ACACIA_CRAFTING_TABLE)
+                .add(ModBlocks.SPRUCE_CRAFTING_TABLE)
+                .add(ModBlocks.DARK_OAK_CRAFTING_TABLE)
+                .add(ModBlocks.JUNGLE_CRAFTING_TABLE)
+                .add(ModBlocks.MANGROVE_CRAFTING_TABLE)
+                .add(ModBlocks.CHERRY_CRAFTING_TABLE)
+                .add(ModBlocks.BAMBOO_CRAFTING_TABLE)
+                .add(ModBlocks.BIRCH_CRAFTING_TABLE)
+                .add(ModBlocks.CRIMSON_CRAFTING_TABLE)
+                .add(ModBlocks.WARPED_CRAFTING_TABLE)
+                .add(Blocks.CRAFTING_TABLE);
 
     }
 }

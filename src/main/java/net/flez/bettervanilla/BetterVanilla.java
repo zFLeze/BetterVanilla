@@ -23,13 +23,13 @@ public class BetterVanilla implements ModInitializer {
 		FlammableBlockRegistry registry = FlammableBlockRegistry.getDefaultInstance();
 		registry.add(Blocks.HAY_BLOCK, 10, 30);
 
-
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroup();
 		ModEvents.registerSitableFunction();
 		ModEvents.registerFireAspectIgnite();
 		ModBlockEntities.registerBlockEntities();
+		ModBlockEntities.registerTrappedChestEntities();
 		ModScreenHandlers.registerScreenHandlers();
 		ModBlockEntities.registerBlockEntities();
 		ModDataComponents.register();

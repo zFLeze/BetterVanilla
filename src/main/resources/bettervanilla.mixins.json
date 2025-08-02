@@ -17,7 +17,11 @@
     "SnowballDamageMixin",
     "CactusBlockMixin",
     "FarmlandBlockMixin",
-    "BerryBushMixin"
+    "BerryBushMixin",
+    "ScreenHandlerMixin",
+    "CauldronBreakMixin",
+    "AnvilCrushDripleafMixin",
+    "ReflectDamageMixin"
   ],
   "injectors": {
     "defaultRequire": 1

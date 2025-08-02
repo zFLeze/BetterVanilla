@@ -11,10 +11,15 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(SnowballEntity.class)
 public class SnowballDamageMixin {
-    @Inject(method = "onEntityHit", at = @At("HEAD"))
+    @Inject(method = "onEntityHit", at = @At("HEAD"), cancellable = true)
     private void damage(EntityHitResult entityHitResult, CallbackInfo ci) {
         SnowballEntity snowball = (SnowballEntity) (Object) this;
-        if (!snowball.getWorld().isClient && entityHitResult.getEntity() instanceof LivingEntity && !(entityHitResult.getEntity() instanceof EndCrystalEntity)) {
+        if (entityHitResult.getEntity() instanceof EndCrystalEntity) {
+            ci.cancel();
+            return;
+        }
+
+        if (!snowball.getWorld().isClient && entityHitResult.getEntity() instanceof LivingEntity) {
             entityHitResult.getEntity().damage(snowball.getDamageSources().thrown(snowball.getOwner(), ((LivingEntity) entityHitResult.getEntity()).getAttacker()), 0.5f);
         }
     }

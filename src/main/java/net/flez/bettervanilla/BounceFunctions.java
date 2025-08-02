@@ -10,7 +10,6 @@ public class BounceFunctions {
         Vec3d velocity = projectile.getVelocity();
         Direction direction = hitResult.getSide();
 
-        // Reflect velocity along axis of impact
         Vec3d bounce = switch (direction.getAxis()) {
             case X -> new Vec3d(-velocity.x * 0.8, velocity.y * 0.8, velocity.z * 0.8);
             case Y -> new Vec3d(velocity.x * 0.8, -velocity.y * 0.8, velocity.z * 0.8);
@@ -23,5 +22,6 @@ public class BounceFunctions {
         projectile.setPos(collisionPos.x, collisionPos.y, collisionPos.z);
         projectile.setVelocity(bounce);
         projectile.setOnGround(false);
+
     }
 }

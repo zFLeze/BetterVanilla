@@ -8,8 +8,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    //public static final Item AMETHYST_SHIELD = registerItem("amethyst_shield",
-            //new FabricShieldItem(new Item.Settings().maxCount(1).maxDamage(350), 5, 0, Items.AMETHYST_SHARD, Items.OAK_PLANKS));
+    public static final Item AMETHYST_SHIELD = registerItem("amethyst_shield",
+            new ShieldItem(new Item.Settings().maxDamage(105).maxCount(1)));
 
     public static final Item COPPER_DUST = registerItem("copper_dust", new Item(new Item.Settings()));
     public static final Item OXIDIZED_COPPER_DUST = registerItem("oxidized_copper_dust", new Item(new Item.Settings()));
@@ -75,6 +75,7 @@ public class ModItems {
             entries.add(COAL_DUST);
             entries.add(AMETHYST_DUST);
             entries.add(GOLD_DUST);
+            entries.add(AMETHYST_SHIELD);
         });
     }
 }

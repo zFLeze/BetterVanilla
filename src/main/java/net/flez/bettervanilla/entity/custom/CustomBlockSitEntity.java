@@ -17,14 +17,29 @@ public class CustomBlockSitEntity extends Entity {
     }
 
     @Override
-    protected void readCustomDataFromNbt(NbtCompound nbt) {}
+    protected void readCustomDataFromNbt(NbtCompound nbt) {
+    }
 
     @Override
-    protected void writeCustomDataToNbt(NbtCompound nbt) {}
+    protected void writeCustomDataToNbt(NbtCompound nbt) {
+    }
 
     @Override
     protected void removePassenger(Entity passenger) {
         super.removePassenger(passenger);
         this.kill();
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+        if (this.getPassengerList().isEmpty()) {
+            this.kill();
+            return;
+        }
+        if (this.getWorld().getBlockState(this.getBlockPos().down()).isAir()) {
+            this.getPassengerList().forEach(Entity::dismountVehicle);
+            this.kill();
+        }
     }
 }
