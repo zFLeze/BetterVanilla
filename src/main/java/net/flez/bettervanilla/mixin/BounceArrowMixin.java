@@ -1,6 +1,6 @@
 package net.flez.bettervanilla.mixin;
 
-import net.flez.bettervanilla.BounceFunctions;
+import net.flez.bettervanilla.util.BounceFunctions;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.util.hit.BlockHitResult;

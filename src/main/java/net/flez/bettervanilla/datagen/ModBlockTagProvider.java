@@ -27,6 +27,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
 
+        getOrCreateTagBuilder(BlockTags.LOGS)
+                .addTag(SITTABLE_LOGS);
+
         getOrCreateTagBuilder(SITTABLE_STAIRS)
                 .add(ModBlocks.FIREPROOF_OAK_STAIRS)
                 .add(ModBlocks.FIREPROOF_SPRUCE_STAIRS)

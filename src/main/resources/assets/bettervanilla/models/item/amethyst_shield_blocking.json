@@ -62,22 +62,14 @@
   "gui_light": "front",
   "display": {
     "thirdperson_righthand": {
-      "rotation": [ 0, 90, 0 ],
-      "translation": [ 10, 6, -4 ],
+      "rotation": [ 45, 135, 0 ],
+      "translation": [ 3, 5, 3 ],
       "scale": [ 1, 1, 1 ]
     },
     "firstperson_righthand": {
       "rotation": [ 0, 180, 0 ],
-      "translation": [ -2, 4, -4 ],
-      "scale": [ 1.5, 1.5, 1.5 ]
+      "translation": [ -2, 10, -2 ],
+      "scale": [ 1.2, 1.2, 1.2 ]
     }
-  },
-  "overrides": [
-    {
-      "predicate": {
-        "blocking": 1
-      },
-      "model": "bettervanilla:item/amethyst_shield_blocking"
-    }
-  ]
+  }
 }

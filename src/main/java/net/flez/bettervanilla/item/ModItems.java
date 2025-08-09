@@ -2,6 +2,7 @@ package net.flez.bettervanilla.item;
 
 import net.flez.bettervanilla.BetterVanilla;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.flez.bettervanilla.item.custom.AmethystShieldItem;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -9,7 +10,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     public static final Item AMETHYST_SHIELD = registerItem("amethyst_shield",
-            new ShieldItem(new Item.Settings().maxDamage(105).maxCount(1)));
+            new AmethystShieldItem(new Item.Settings().maxDamage(105).maxCount(1)));
 
     public static final Item COPPER_DUST = registerItem("copper_dust", new Item(new Item.Settings()));
     public static final Item OXIDIZED_COPPER_DUST = registerItem("oxidized_copper_dust", new Item(new Item.Settings()));
@@ -22,7 +23,7 @@ public class ModItems {
     public static final Item COPPER_SWORD = registerItem("copper_sword",
             new SwordItem(ModToolMaterials.COPPER, new Item.Settings().attributeModifiers(
                     SwordItem.createAttributeModifiers(
-                            ModToolMaterials.COPPER, 3, -2.4f))));
+                            ModToolMaterials.COPPER, 3, -2.8f))));
 
     public static final Item COPPER_PICKAXE = registerItem("copper_pickaxe",
             new PickaxeItem(ModToolMaterials.COPPER, new Item.Settings().attributeModifiers(

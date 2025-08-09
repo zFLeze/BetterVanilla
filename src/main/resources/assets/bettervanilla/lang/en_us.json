@@ -164,5 +164,8 @@
   "item.bettervanilla.copper_helmet": "Copper Helmet",
   "item.bettervanilla.copper_chestplate": "Copper Chestplate",
   "item.bettervanilla.copper_leggings": "Copper Leggings",
-  "item.bettervanilla.copper_boots": "Copper Boots"
+  "item.bettervanilla.copper_boots": "Copper Boots",
+
+  "gamerule.loseVelocityOnBounce": "loseVelocityOnBounce",
+  "death.attack.stonecutter": "%1$s was sliced by a stonecutter"
 }

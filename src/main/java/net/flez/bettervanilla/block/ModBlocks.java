@@ -53,6 +53,33 @@ public class ModBlocks {
 
 
 
+    public static final Block PALM_LOG = registerBlock("palm_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_LOG)));
+
+    public static final Block PALM_WOOD = registerBlock("palm_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_WOOD)));
+
+    public static final Block STRIPPED_PALM_LOG = registerBlock("stripped_palm_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_LOG)));
+
+    public static final Block STRIPPED_PALM_WOOD = registerBlock("stripped_palm_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_LOG)));
+
+    public static final Block PALM_PLANKS = registerBlock("palm_planks",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS)));
+
+    public static final Block PALM_STAIRS = registerBlock("palm_stairs",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_LOG)));
+
+    public static final Block PALM_LOG = registerBlock("palm_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_LOG)));
+
+    public static final Block PALM_LOG = registerBlock("palm_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_LOG)));
+
+
+
+
     public static final Block SPRUCE_CRAFTING_TABLE = registerBlock("spruce_crafting_table",
             new CraftingTableBlock(AbstractBlock.Settings.copy(Blocks.CRAFTING_TABLE)));
 
@@ -83,65 +110,6 @@ public class ModBlocks {
     public static final Block WARPED_CRAFTING_TABLE = registerBlock("warped_crafting_table",
             new CraftingTableBlock(AbstractBlock.Settings.copy(Blocks.CRAFTING_TABLE)));
 
-    public static final Block SPRUCE_CHEST = registerBlock("spruce_chest",
-            new ChestBlock(AbstractBlock.Settings.copy(Blocks.CHEST), () -> BlockEntityType.CHEST));
-
-    public static final Block TRAPPED_SPRUCE_CHEST = registerBlock("trapped_spruce_chest",
-            new ModTrappedChest(AbstractBlock.Settings.copy(Blocks.TRAPPED_CHEST)));
-
-    public static final Block DARK_OAK_CHEST = registerBlock("dark_oak_chest",
-            new ChestBlock(AbstractBlock.Settings.copy(Blocks.CHEST), () -> BlockEntityType.CHEST));
-
-    public static final Block TRAPPED_DARK_OAK_CHEST = registerBlock("trapped_dark_oak_chest",
-            new ModTrappedChest(AbstractBlock.Settings.copy(Blocks.TRAPPED_CHEST)));
-
-    public static final Block ACACIA_CHEST = registerBlock("acacia_chest",
-            new ChestBlock(AbstractBlock.Settings.copy(Blocks.CHEST), () -> BlockEntityType.CHEST));
-
-    public static final Block TRAPPED_ACACIA_CHEST = registerBlock("trapped_acacia_chest",
-            new ModTrappedChest(AbstractBlock.Settings.copy(Blocks.TRAPPED_CHEST)));
-
-    public static final Block JUNGLE_CHEST = registerBlock("jungle_chest",
-            new ChestBlock(AbstractBlock.Settings.copy(Blocks.CHEST), () -> BlockEntityType.CHEST));
-
-    public static final Block TRAPPED_JUNGLE_CHEST = registerBlock("trapped_jungle_chest",
-            new ModTrappedChest(AbstractBlock.Settings.copy(Blocks.TRAPPED_CHEST)));
-
-    public static final Block MANGROVE_CHEST = registerBlock("mangrove_chest",
-            new ChestBlock(AbstractBlock.Settings.copy(Blocks.CHEST), () -> BlockEntityType.CHEST));
-
-    public static final Block TRAPPED_MANGROVE_CHEST = registerBlock("trapped_spruce_chest",
-            new ModTrappedChest(AbstractBlock.Settings.copy(Blocks.TRAPPED_CHEST)));
-
-    public static final Block CHERRY_CHEST = registerBlock("cherry_chest",
-            new ChestBlock(AbstractBlock.Settings.copy(Blocks.CHEST), () -> BlockEntityType.CHEST));
-
-    public static final Block TRAPPED_CHERRY_CHEST = registerBlock("trapped_cherry_chest",
-            new ModTrappedChest(AbstractBlock.Settings.copy(Blocks.TRAPPED_CHEST)));
-
-    public static final Block BAMBOO_CHEST = registerBlock("bamboo_chest",
-            new ChestBlock(AbstractBlock.Settings.copy(Blocks.CHEST), () -> BlockEntityType.CHEST));
-
-    public static final Block TRAPPED_BAMBOO_CHEST = registerBlock("trapped_bamboo_chest",
-            new ModTrappedChest(AbstractBlock.Settings.copy(Blocks.TRAPPED_CHEST)));
-
-    public static final Block BIRCH_CHEST = registerBlock("birch_chest",
-            new ChestBlock(AbstractBlock.Settings.copy(Blocks.CHEST), () -> BlockEntityType.CHEST));
-
-    public static final Block TRAPPED_BIRCH_CHEST = registerBlock("trapped_birch_chest",
-            new ModTrappedChest(AbstractBlock.Settings.copy(Blocks.TRAPPED_CHEST)));
-
-    public static final Block CRIMSON_CHEST = registerBlock("crimson_chest",
-            new ChestBlock(AbstractBlock.Settings.copy(Blocks.CHEST), () -> BlockEntityType.CHEST));
-
-    public static final Block TRAPPED_CRIMSON_CHEST = registerBlock("trapped_crimson_chest",
-            new ModTrappedChest(AbstractBlock.Settings.copy(Blocks.TRAPPED_CHEST)));
-
-    public static final Block WARPED_CHEST = registerBlock("warped_chest",
-            new ChestBlock(AbstractBlock.Settings.copy(Blocks.CHEST), () -> BlockEntityType.CHEST));
-
-    public static final Block TRAPPED_WARPED_CHEST = registerBlock("trapped_warped_chest",
-            new ModTrappedChest(AbstractBlock.Settings.copy(Blocks.TRAPPED_CHEST)));
 
 
 
@@ -702,26 +670,6 @@ public class ModBlocks {
             entries.add(BIRCH_CRAFTING_TABLE);
             entries.add(CRIMSON_CRAFTING_TABLE);
             entries.add(WARPED_CRAFTING_TABLE);
-            entries.add(TRAPPED_CRIMSON_CHEST);
-            entries.add(TRAPPED_JUNGLE_CHEST);
-            entries.add(TRAPPED_DARK_OAK_CHEST);
-            entries.add(TRAPPED_MANGROVE_CHEST);
-            entries.add(TRAPPED_CHERRY_CHEST);
-            entries.add(TRAPPED_BIRCH_CHEST);
-            entries.add(TRAPPED_BAMBOO_CHEST);
-            entries.add(TRAPPED_ACACIA_CHEST);
-            entries.add(TRAPPED_WARPED_CHEST);
-            entries.add(TRAPPED_SPRUCE_CHEST);
-            entries.add(SPRUCE_CHEST);
-            entries.add(DARK_OAK_CHEST);
-            entries.add(ACACIA_CHEST);
-            entries.add(MANGROVE_CHEST);
-            entries.add(JUNGLE_CHEST);
-            entries.add(CHERRY_CHEST);
-            entries.add(BAMBOO_CHEST);
-            entries.add(BIRCH_CHEST);
-            entries.add(CRIMSON_CHEST);
-            entries.add(WARPED_CHEST);
 
 
             entries.add(FIREPROOF_OAK_PLANKS);

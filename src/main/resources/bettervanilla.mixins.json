@@ -11,7 +11,7 @@
     "BounceSnowballMixin",
     "BounceSpectralArrowMixin",
     "BounceWindChargeMixin",
-    "ChangeStackabilityMixin",
+    "ChangeStackabilityFunctionsMixin",
     "CreeperEntityMixin",
     "MobEntityAccessor",
     "SnowballDamageMixin",
@@ -21,7 +21,12 @@
     "ScreenHandlerMixin",
     "CauldronBreakMixin",
     "AnvilCrushDripleafMixin",
-    "ReflectDamageMixin"
+    "ReflectDamageMixin",
+    "RecoveryCompassUseMixin",
+    "StoneCutterDamageMixin",
+    "CampfireEntityDropMixin",
+    "DecreaseDurabilityOnRightClickMixin",
+    "SetDurabilityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

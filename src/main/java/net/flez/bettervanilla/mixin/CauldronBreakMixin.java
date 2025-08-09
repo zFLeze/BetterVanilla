@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(Block.class)
 public class CauldronBreakMixin {
     @Inject(method = "onBreak", at = @At("HEAD"))
-    private void onCauldronBreak(World world, BlockPos pos, BlockState state, PlayerEntity player, CallbackInfoReturnable<BlockState> cir) {
+    private void bettervanilla$onCauldronBreak(World world, BlockPos pos, BlockState state, PlayerEntity player, CallbackInfoReturnable<BlockState> cir) {
         if (!world.isClient()) {
             if (state.isOf(Blocks.LAVA_CAULDRON)) {
                 world.setBlockState(pos, Blocks.LAVA.getDefaultState());

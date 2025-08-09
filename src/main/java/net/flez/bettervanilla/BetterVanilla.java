@@ -8,8 +8,10 @@ import net.flez.bettervanilla.item.ModItemGroups;
 import net.flez.bettervanilla.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+import net.flez.bettervanilla.util.ChangeStackabilityAccess;
 import net.flez.bettervanilla.screen.ModScreenHandlers;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.Items;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,5 +35,9 @@ public class BetterVanilla implements ModInitializer {
 		ModScreenHandlers.registerScreenHandlers();
 		ModBlockEntities.registerBlockEntities();
 		ModDataComponents.register();
+        ((ChangeStackabilityAccess) Items.CAKE).bettervanilla$applyChangingStackability(64);
+        ((ChangeStackabilityAccess) Items.POTION).bettervanilla$applyChangingStackability(16);
+        ((ChangeStackabilityAccess) Items.SPLASH_POTION).bettervanilla$applyChangingStackability(16);
+        ((ChangeStackabilityAccess) Items.LINGERING_POTION).bettervanilla$applyChangingStackability(16);
 	}
 }
