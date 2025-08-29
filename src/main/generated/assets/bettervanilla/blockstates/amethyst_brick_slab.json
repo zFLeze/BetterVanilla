@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "bettervanilla:block/amethyst_brick_slab"
+    },
+    "type=double": {
+      "model": "bettervanilla:block/amethyst_bricks"
+    },
+    "type=top": {
+      "model": "bettervanilla:block/amethyst_brick_slab_top"
+    }
+  }
+}

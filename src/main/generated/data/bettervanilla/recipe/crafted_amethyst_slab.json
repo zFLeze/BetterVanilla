@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "A": {
+      "item": "bettervanilla:amethyst_bricks"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "   ",
+    "   "
+  ],
+  "result": {
+    "count": 6,
+    "id": "bettervanilla:amethyst_brick_slab"
+  }
+}

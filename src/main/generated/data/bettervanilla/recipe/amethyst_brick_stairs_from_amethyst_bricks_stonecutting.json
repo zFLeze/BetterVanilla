@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "bettervanilla:amethyst_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "bettervanilla:amethyst_brick_stairs"
+  }
+}

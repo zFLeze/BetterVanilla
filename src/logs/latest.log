@@ -1,0 +1,22 @@
+[10:38:56] [main/INFO]: Loading Minecraft 1.21.1 with Fabric Loader 0.16.14
+[10:38:57] [main/INFO]: Fabric is preparing JARs on first launch, this may take a few seconds...
+[10:38:58] [main/INFO]: Loading 4 mods:
+	- fabricloader 0.16.14
+	   \-- mixinextras 0.4.1
+	- java 21
+	- minecraft 1.21.1
+[10:38:59] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/Admin/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.5+mixin.0.8.7/22f9eb729e216a091673a574a5906dc1b9027fb3/sponge-mixin-0.15.5+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[10:39:14] [Datafixer Bootstrap/INFO]: 226 Datafixer optimizations took 967 milliseconds
+[10:39:36] [main/WARN]: Failed to get system info for GL Caps
+java.lang.IllegalStateException: Rendersystem called from wrong thread
+	at knot/com.mojang.blaze3d.systems.RenderSystem.constructThreadException(RenderSystem.java:124) ~[client-intermediary.jar:?]
+	at knot/com.mojang.blaze3d.systems.RenderSystem.assertOnRenderThread(RenderSystem.java:119) ~[client-intermediary.jar:?]
+	at knot/com.mojang.blaze3d.systems.RenderSystem.getCapsString(RenderSystem.java:497) ~[client-intermediary.jar:?]
+	at knot/net.minecraft.util.SystemDetails.addSection(SystemDetails.java:85) [client-intermediary.jar:?]
+	at knot/net.minecraft.client.MinecraftClient.addSystemDetailsToCrashReport(MinecraftClient.java:2507) [client-intermediary.jar:?]
+	at knot/net.minecraft.client.MinecraftClient.addSystemDetailsToCrashReport(MinecraftClient.java:2477) [client-intermediary.jar:?]
+	at knot/net.minecraft.client.main.Main.main(Main.java:188) [client-intermediary.jar:?]
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480) [fabric-loader-0.16.14.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74) [fabric-loader-0.16.14.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.16.14.jar:?]
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) [dev-launch-injector-0.2.1+build.8.jar:?]

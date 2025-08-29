@@ -1,0 +1,15 @@
+{
+  "values": [
+    "bettervanilla:acacia_crafting_table",
+    "bettervanilla:spruce_crafting_table",
+    "bettervanilla:dark_oak_crafting_table",
+    "bettervanilla:jungle_crafting_table",
+    "bettervanilla:mangrove_crafting_table",
+    "bettervanilla:cherry_crafting_table",
+    "bettervanilla:bamboo_crafting_table",
+    "bettervanilla:birch_crafting_table",
+    "bettervanilla:crimson_crafting_table",
+    "bettervanilla:warped_crafting_table",
+    "minecraft:crafting_table"
+  ]
+}

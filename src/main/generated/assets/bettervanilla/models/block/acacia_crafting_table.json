@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/acacia_planks",
+    "east": "bettervanilla:block/acacia_crafting_table_side",
+    "north": "bettervanilla:block/acacia_crafting_table_front",
+    "particle": "bettervanilla:block/acacia_crafting_table_front",
+    "south": "bettervanilla:block/acacia_crafting_table_side",
+    "up": "bettervanilla:block/acacia_crafting_table_top",
+    "west": "bettervanilla:block/acacia_crafting_table_front"
+  }
+}

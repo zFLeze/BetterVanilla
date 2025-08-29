@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "P": {
+      "item": "minecraft:jungle_planks"
+    }
+  },
+  "pattern": [
+    "PP ",
+    "PP "
+  ],
+  "result": {
+    "count": 1,
+    "id": "bettervanilla:jungle_crafting_table"
+  }
+}

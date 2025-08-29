@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "bettervanilla:block/chiseled_amethyst_block"
+  }
+}

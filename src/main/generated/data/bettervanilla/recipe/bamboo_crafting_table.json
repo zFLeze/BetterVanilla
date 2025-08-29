@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "P": {
+      "item": "minecraft:bamboo_planks"
+    }
+  },
+  "pattern": [
+    "PP ",
+    "PP "
+  ],
+  "result": {
+    "count": 1,
+    "id": "bettervanilla:bamboo_crafting_table"
+  }
+}

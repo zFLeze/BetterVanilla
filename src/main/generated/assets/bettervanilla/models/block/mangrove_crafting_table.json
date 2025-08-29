@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/mangrove_planks",
+    "east": "bettervanilla:block/mangrove_crafting_table_side",
+    "north": "bettervanilla:block/mangrove_crafting_table_front",
+    "particle": "bettervanilla:block/mangrove_crafting_table_front",
+    "south": "bettervanilla:block/mangrove_crafting_table_side",
+    "up": "bettervanilla:block/mangrove_crafting_table_top",
+    "west": "bettervanilla:block/mangrove_crafting_table_front"
+  }
+}

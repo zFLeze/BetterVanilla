@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "bettervanilla:block/amethyst_lamp"
+    },
+    "lit=true": {
+      "model": "bettervanilla:block/amethyst_lamp_on"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "P": {
+      "item": "minecraft:spruce_planks"
+    }
+  },
+  "pattern": [
+    "PP ",
+    "PP "
+  ],
+  "result": {
+    "count": 1,
+    "id": "bettervanilla:spruce_crafting_table"
+  }
+}

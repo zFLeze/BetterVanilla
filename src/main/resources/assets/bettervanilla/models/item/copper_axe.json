@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "bettervanilla:item/copper_axe"
+  },
+  "overrides": [
+    { "predicate": { "bettervanilla:oxidization": 0.33 }, "model": "bettervanilla:item/exposed_copper_axe" },
+    { "predicate": { "bettervanilla:oxidization": 0.66 }, "model": "bettervanilla:item/weathered_copper_axe" },
+    { "predicate": { "bettervanilla:oxidization": 1 }, "model": "bettervanilla:item/oxidized_copper_axe" }
+  ]
+}
