@@ -95,4 +95,5 @@ public class ModEvents {
                 .entryOf(Enchantments.FIRE_ASPECT);
         return EnchantmentHelper.getLevel(fireAspect, stack) > 0;
     }
+
 }

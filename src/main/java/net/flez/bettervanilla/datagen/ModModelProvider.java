@@ -25,8 +25,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(strippedLog).log(strippedLog).wood(strippedWood);
     }
 
-
-
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
 

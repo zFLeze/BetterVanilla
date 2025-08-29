@@ -20,10 +20,6 @@ public abstract class DecreaseDurabilityOnRightClickMixin {
         ItemStack stack = user.getStackInHand(hand);
         if (stack.getItem() == Items.RECOVERY_COMPASS) {
             stack.damage(1, user, EquipmentSlot.MAINHAND);
-
-            if (stack.getDamage() == stack.getMaxDamage() && !(stack.getMaxDamage() == 0)) {
-                stack.decrement(1);
-            }
         }
     }
 }

@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(Item.class)
 public class SetDurabilityMixin {
     @Inject(method = "use", at = @At("HEAD"))
-    private void bettervanilla$damageCompass(World world, PlayerEntity user, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir) {
+    private void bettervanilla$setDurability(World world, PlayerEntity user, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir) {
        ItemStack stack = user.getStackInHand(hand);
        if (stack.getItem() == Items.RECOVERY_COMPASS) {
            stack.set(DataComponentTypes.MAX_DAMAGE, 15);

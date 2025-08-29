@@ -10,6 +10,7 @@ import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
@@ -38,12 +39,114 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(BetterVanilla.MOD_ID, name));
     }
 
+        // Resolve items by naming convention: bettervanilla:fireproof_<wood>_<part>
+        private static ItemConvertible ic(String path) {
+            return Registries.ITEM.get(Identifier.of(BetterVanilla.MOD_ID, path));
+        }
+
+        // Generate for a single wood family (e.g., "oak", "spruce", ...)
+        public static void generateFireproofWoodSet(RecipeExporter exporter, String wood) {
+            final String base = "fireproof_" + wood;
+
+            // core ingredients
+            ItemConvertible LOG             = ic(base + "_log");
+            ItemConvertible WOOD            = ic(base + "_wood");
+            ItemConvertible STRIPPED_LOG    = ic("stripped_" + base + "_log");
+            ItemConvertible STRIPPED_WOOD   = ic("stripped_" + base + "_wood");
+            ItemConvertible PLANKS          = ic(base + "_planks");
+
+            // blocks/items
+            ItemConvertible STAIRS          = ic(base + "_stairs");
+            ItemConvertible SLAB            = ic(base + "_slab");
+            ItemConvertible FENCE           = ic(base + "_fence");
+            ItemConvertible FENCE_GATE      = ic(base + "_fence_gate");
+            ItemConvertible BUTTON          = ic(base + "_button");
+            ItemConvertible PRESSURE_PLATE  = ic(base + "_pressure_plate");
+
+             ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, PLANKS, 4)
+                    .input(LOG)
+                    .criterion(hasItem(LOG), conditionsFromItem(LOG))
+                    .offerTo(exporter, Identifier.of(BetterVanilla.MOD_ID, "normal_" + wood + "_planks_from_log"));
+
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, PLANKS, 4)
+                    .input(WOOD)
+                    .criterion(hasItem(WOOD), conditionsFromItem(WOOD))
+                    .offerTo(exporter, Identifier.of(BetterVanilla.MOD_ID, "normal_" + wood + "_planks_from_wood"));
+
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, PLANKS, 4)
+                    .input(STRIPPED_LOG)
+                    .criterion(hasItem(STRIPPED_LOG), conditionsFromItem(STRIPPED_LOG))
+                    .offerTo(exporter, Identifier.of(BetterVanilla.MOD_ID, "normal_" + wood + "_planks_from_stripped_log"));
+
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, PLANKS, 4)
+                    .input(STRIPPED_WOOD)
+                    .criterion(hasItem(STRIPPED_WOOD), conditionsFromItem(STRIPPED_WOOD))
+                    .offerTo(exporter, Identifier.of(BetterVanilla.MOD_ID, "normal_" + wood + "_planks_from_stripped_wood"));
+
+            // --- STAIRS ---
+            ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, STAIRS, 4)
+                    .pattern("P  ")
+                    .pattern("PP ")
+                    .pattern("PPP")
+                    .input('P', PLANKS)
+                    .criterion(hasItem(PLANKS), conditionsFromItem(PLANKS))
+                    .offerTo(exporter, Identifier.of(BetterVanilla.MOD_ID, "normal_" + wood + "_stairs"));
+
+            // --- SLAB ---
+            ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, SLAB, 6)
+                    .pattern("PPP")
+                    .input('P', PLANKS)
+                    .criterion(hasItem(PLANKS), conditionsFromItem(PLANKS))
+                    .offerTo(exporter, Identifier.of(BetterVanilla.MOD_ID, "normal_" + wood + "_slab"));
+
+            // --- FENCE ---
+            ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, FENCE, 3)
+                    .pattern("P#P")
+                    .pattern("P#P")
+                    .input('P', PLANKS)
+                    .input('#', Items.STICK)
+                    .criterion(hasItem(PLANKS), conditionsFromItem(PLANKS))
+                    .offerTo(exporter, Identifier.of(BetterVanilla.MOD_ID, "normal_" + wood + "_fence"));
+
+            // --- FENCE GATE ---
+            ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, FENCE_GATE)
+                    .pattern("#P#")
+                    .pattern("#P#")
+                    .input('P', PLANKS)
+                    .input('#', Items.STICK)
+                    .criterion(hasItem(PLANKS), conditionsFromItem(PLANKS))
+                    .offerTo(exporter, Identifier.of(BetterVanilla.MOD_ID, "normal_" + wood + "_fence_gate"));
+
+            // --- BUTTON ---
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, BUTTON)
+                    .input(PLANKS)
+                    .criterion(hasItem(PLANKS), conditionsFromItem(PLANKS))
+                    .offerTo(exporter, Identifier.of(BetterVanilla.MOD_ID, "normal_" + wood + "_button"));
+
+            // --- PRESSURE PLATE ---
+            ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, PRESSURE_PLATE)
+                    .pattern("PP")
+                    .input('P', PLANKS)
+                    .criterion(hasItem(PLANKS), conditionsFromItem(PLANKS))
+                    .offerTo(exporter, Identifier.of(BetterVanilla.MOD_ID, "normal_" + wood + "_pressure_plate"));
+        }
+
+        // Call this once from your RecipeProvider#generate
+        public static void generateAllFireproofWoodSets(RecipeExporter exporter) {
+            String[] woods = { "oak", "spruce", "birch", "jungle", "acacia", "dark_oak", "mangrove", "cherry"};
+            for (String w : woods) {
+                generateFireproofWoodSet(exporter, w);
+            }
+        }
+
+
     public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
     }
 
     @Override
     public void generate(RecipeExporter recipeExporter) {
+        generateAllFireproofWoodSets(recipeExporter);
         //  CUSTOM  CRAFTING  RECIPE
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.COPPER_SWORD)
                 .pattern(" C ")

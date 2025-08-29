@@ -3,9 +3,7 @@ package net.flez.bettervanilla.block;
 import net.flez.bettervanilla.BetterVanilla;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.flez.bettervanilla.block.custom.AmethystLampBlock;
-import net.flez.bettervanilla.block.custom.ModTrappedChest;
 import net.minecraft.block.*;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -60,22 +58,48 @@ public class ModBlocks {
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_WOOD)));
 
     public static final Block STRIPPED_PALM_LOG = registerBlock("stripped_palm_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_LOG)));
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_JUNGLE_LOG)));
 
     public static final Block STRIPPED_PALM_WOOD = registerBlock("stripped_palm_wood",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_LOG)));
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_JUNGLE_WOOD)));
 
     public static final Block PALM_PLANKS = registerBlock("palm_planks",
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS)));
 
     public static final Block PALM_STAIRS = registerBlock("palm_stairs",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_LOG)));
+            new StairsBlock(ModBlocks.PALM_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.JUNGLE_STAIRS)));
 
-    public static final Block PALM_LOG = registerBlock("palm_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_LOG)));
+    public static final Block PALM_SLAB = registerBlock("palm_slab",
+            new SlabBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_SLAB)));
 
-    public static final Block PALM_LOG = registerBlock("palm_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_LOG)));
+    public static final Block PALM_DOOR = registerBlock("palm_door",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_DOOR)));
+
+    public static final Block PALM_TRAPDOOR = registerBlock("palm_trapdoor",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_TRAPDOOR)));
+
+    public static final Block PALM_FENCE = registerBlock("palm_fence",
+            new FenceBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_FENCE)));
+
+    public static final Block PALM_FENCE_GATE = registerBlock("palm_fence_gate",
+            new FenceBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_FENCE_GATE)));
+
+    public static final Block PALM_SIGN = registerBlock("palm_sign",
+            new SignBlock(WoodType.JUNGLE, AbstractBlock.Settings.copy(Blocks.JUNGLE_SIGN)));
+
+    public static final Block PALM_WALL_SIGN = registerBlock("palm_wall_sign",
+            new WallSignBlock(WoodType.JUNGLE, AbstractBlock.Settings.copy(Blocks.JUNGLE_WALL_SIGN)));
+
+    public static final Block PALM_HANGING_SIGN = registerBlock("palm_hanging_sign",
+            new HangingSignBlock(WoodType.JUNGLE, AbstractBlock.Settings.copy(Blocks.JUNGLE_HANGING_SIGN)));
+
+    public static final Block PALM_BUTTON = registerBlock("palm_button",
+            new ButtonBlock(BlockSetType.JUNGLE, 30, AbstractBlock.Settings.copy(Blocks.JUNGLE_BUTTON)));
+
+    public static final Block PALM_PRESSURE_PLATE = registerBlock("palm_pressure_plate",
+            new PressurePlateBlock(BlockSetType.JUNGLE, AbstractBlock.Settings.copy(Blocks.JUNGLE_PRESSURE_PLATE)));
+
+
 
 
 
@@ -670,6 +694,23 @@ public class ModBlocks {
             entries.add(BIRCH_CRAFTING_TABLE);
             entries.add(CRIMSON_CRAFTING_TABLE);
             entries.add(WARPED_CRAFTING_TABLE);
+
+            entries.add(PALM_LOG);
+            entries.add(PALM_WOOD);
+            entries.add(STRIPPED_PALM_LOG);
+            entries.add(STRIPPED_PALM_WOOD);
+            entries.add(PALM_PLANKS);
+            entries.add(PALM_STAIRS);
+            entries.add(PALM_SLAB);
+            entries.add(PALM_FENCE);
+            entries.add(PALM_FENCE_GATE);
+            entries.add(PALM_DOOR);
+            entries.add(PALM_TRAPDOOR);
+            entries.add(PALM_BUTTON);
+            entries.add(PALM_PRESSURE_PLATE);
+            entries.add(PALM_SIGN);
+            entries.add(PALM_WALL_SIGN);
+            entries.add(PALM_HANGING_SIGN);
 
 
             entries.add(FIREPROOF_OAK_PLANKS);
