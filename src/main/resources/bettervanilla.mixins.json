@@ -26,7 +26,11 @@
     "StoneCutterDamageMixin",
     "CampfireEntityDropMixin",
     "DecreaseDurabilityOnRightClickMixin",
-    "SetDurabilityMixin"
+    "SetDurabilityMixin",
+    "GrindstoneMixin",
+    "WaterCauldronMixin",
+    "DamageEndermanInWaterCauldronMixin",
+    "StopUsingFunctionsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

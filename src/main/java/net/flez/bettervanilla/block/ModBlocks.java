@@ -4,6 +4,7 @@ import net.flez.bettervanilla.BetterVanilla;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.flez.bettervanilla.block.custom.AmethystLampBlock;
 import net.minecraft.block.*;
+import net.minecraft.item.AxeItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -84,14 +85,14 @@ public class ModBlocks {
     public static final Block PALM_FENCE_GATE = registerBlock("palm_fence_gate",
             new FenceBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_FENCE_GATE)));
 
-    public static final Block PALM_SIGN = registerBlock("palm_sign",
-            new SignBlock(WoodType.JUNGLE, AbstractBlock.Settings.copy(Blocks.JUNGLE_SIGN)));
-
-    public static final Block PALM_WALL_SIGN = registerBlock("palm_wall_sign",
-            new WallSignBlock(WoodType.JUNGLE, AbstractBlock.Settings.copy(Blocks.JUNGLE_WALL_SIGN)));
-
-    public static final Block PALM_HANGING_SIGN = registerBlock("palm_hanging_sign",
-            new HangingSignBlock(WoodType.JUNGLE, AbstractBlock.Settings.copy(Blocks.JUNGLE_HANGING_SIGN)));
+//    public static final Block PALM_SIGN = registerBlock("palm_sign",
+//            new SignBlock(WoodType.JUNGLE, AbstractBlock.Settings.copy(Blocks.JUNGLE_SIGN)));
+//
+//    public static final Block PALM_WALL_SIGN = registerBlock("palm_wall_sign",
+//            new WallSignBlock(WoodType.JUNGLE, AbstractBlock.Settings.copy(Blocks.JUNGLE_WALL_SIGN)));
+//
+//    public static final Block PALM_HANGING_SIGN = registerBlock("palm_hanging_sign",
+//            new HangingSignBlock(WoodType.JUNGLE, AbstractBlock.Settings.copy(Blocks.JUNGLE_HANGING_SIGN)));
 
     public static final Block PALM_BUTTON = registerBlock("palm_button",
             new ButtonBlock(BlockSetType.JUNGLE, 30, AbstractBlock.Settings.copy(Blocks.JUNGLE_BUTTON)));
@@ -708,9 +709,6 @@ public class ModBlocks {
             entries.add(PALM_TRAPDOOR);
             entries.add(PALM_BUTTON);
             entries.add(PALM_PRESSURE_PLATE);
-            entries.add(PALM_SIGN);
-            entries.add(PALM_WALL_SIGN);
-            entries.add(PALM_HANGING_SIGN);
 
 
             entries.add(FIREPROOF_OAK_PLANKS);

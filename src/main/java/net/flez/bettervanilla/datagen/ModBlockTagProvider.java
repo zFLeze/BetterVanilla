@@ -16,8 +16,6 @@ import net.minecraft.util.Identifier;
 import java.util.concurrent.CompletableFuture;
 
 public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
-    public static final TagKey<Block> SITTABLE_STAIRS = TagKey.of(RegistryKeys.BLOCK, Identifier.of(BetterVanilla.MOD_ID, "sittable_stairs"));
-    public static final TagKey<Block> SITTABLE_LOGS = TagKey.of(RegistryKeys.BLOCK, Identifier.of(BetterVanilla.MOD_ID, "sittable_logs"));
     public static final TagKey<Block> CRAFTING_TABLES = TagKey.of(RegistryKeys.BLOCK, Identifier.of(BetterVanilla.MOD_ID, "crafting_tables"));
 
     public ModBlockTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
@@ -26,65 +24,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-
-        getOrCreateTagBuilder(BlockTags.LOGS)
-                .addTag(SITTABLE_LOGS);
-
-        getOrCreateTagBuilder(SITTABLE_STAIRS)
-                .add(ModBlocks.FIREPROOF_OAK_STAIRS)
-                .add(ModBlocks.FIREPROOF_SPRUCE_STAIRS)
-                .add(ModBlocks.FIREPROOF_DARK_OAK_STAIRS)
-                .add(ModBlocks.FIREPROOF_ACACIA_STAIRS)
-                .add(ModBlocks.FIREPROOF_JUNGLE_STAIRS)
-                .add(ModBlocks.FIREPROOF_MANGROVE_STAIRS)
-                .add(ModBlocks.FIREPROOF_CHERRY_STAIRS)
-                .add(ModBlocks.FIREPROOF_BIRCH_STAIRS)
-                .add(ModBlocks.FIREPROOF_BAMBOO_STAIRS)
-
-                .add(Blocks.OAK_STAIRS)
-                .add(Blocks.SPRUCE_STAIRS)
-                .add(Blocks.DARK_OAK_STAIRS)
-                .add(Blocks.ACACIA_STAIRS)
-                .add(Blocks.JUNGLE_STAIRS)
-                .add(Blocks.MANGROVE_STAIRS)
-                .add(Blocks.CHERRY_STAIRS)
-                .add(Blocks.BIRCH_STAIRS)
-                .add(Blocks.BAMBOO_STAIRS);
-
-
-                getOrCreateTagBuilder(SITTABLE_LOGS)
-                .add(Blocks.OAK_LOG)
-                .add(Blocks.STRIPPED_OAK_LOG)
-                .add(Blocks.SPRUCE_LOG)
-                .add(Blocks.STRIPPED_SPRUCE_LOG)
-                .add(Blocks.DARK_OAK_LOG)
-                .add(Blocks.STRIPPED_DARK_OAK_LOG)
-                .add(Blocks.ACACIA_LOG)
-                .add(Blocks.STRIPPED_ACACIA_LOG)
-                .add(Blocks.JUNGLE_LOG)
-                .add(Blocks.STRIPPED_JUNGLE_LOG)
-                .add(Blocks.MANGROVE_LOG)
-                .add(Blocks.STRIPPED_MANGROVE_LOG)
-                .add(Blocks.CHERRY_LOG)
-                .add(Blocks.STRIPPED_CHERRY_LOG)
-                .add(Blocks.BIRCH_LOG)
-                .add(Blocks.STRIPPED_BIRCH_LOG)
-
-                .add(ModBlocks.FIREPROOF_OAK_LOG)
-                .add(ModBlocks.FIREPROOF_STRIPPED_OAK_LOG)
-                .add(ModBlocks.FIREPROOF_SPRUCE_LOG)
-                .add(ModBlocks.FIREPROOF_STRIPPED_SPRUCE_LOG)
-                .add(ModBlocks.FIREPROOF_DARK_OAK_LOG)
-                .add(ModBlocks.FIREPROOF_STRIPPED_DARK_OAK_LOG)
-                .add(ModBlocks.FIREPROOF_ACACIA_LOG)
-                .add(ModBlocks.FIREPROOF_STRIPPED_ACACIA_LOG)
-                .add(ModBlocks.FIREPROOF_JUNGLE_LOG)
-                .add(ModBlocks.FIREPROOF_STRIPPED_JUNGLE_LOG)
-                .add(ModBlocks.FIREPROOF_CHERRY_LOG)
-                .add(ModBlocks.FIREPROOF_STRIPPED_CHERRY_LOG)
-                .add(ModBlocks.FIREPROOF_BIRCH_LOG)
-                .add(ModBlocks.FIREPROOF_STRIPPED_BIRCH_LOG);
-
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.FIREPROOF_OAK_PLANKS)
