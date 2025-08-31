@@ -31,6 +31,10 @@ public class BetterVanilla implements ModInitializer {
 		ModItemGroups.registerItemGroup();
 		ModEvents.registerSittableFunction();
 		ModEvents.registerFireAspectIgnite();
+		ModEvents.registerCauldronAfterBreak();
+		ModEvents.registerGrindFunction();
+		ModEvents.registerRecoveryCompassUsage();
+		ModEvents.registerTakeNoDamageWithArmor();
 		ModBlockEntities.registerBlockEntities();
 		ModBlockEntities.registerTrappedChestEntities();
 		ModScreenHandlers.registerScreenHandlers();

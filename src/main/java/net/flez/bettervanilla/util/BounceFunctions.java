@@ -10,6 +10,10 @@ public class BounceFunctions {
         Vec3d velocity = projectile.getVelocity();
         Direction direction = hitResult.getSide();
 
+        if (velocity.lengthSquared() < 0.05) {
+            return;
+        }
+
             Vec3d bounce = switch (direction.getAxis()) {
                 case X -> new Vec3d(-velocity.x, velocity.y, velocity.z);
                 case Y -> new Vec3d(velocity.x, -velocity.y * 0.7, velocity.z);
