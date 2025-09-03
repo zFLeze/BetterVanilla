@@ -3,6 +3,7 @@ package net.flez.bettervanilla.item;
 import net.flez.bettervanilla.BetterVanilla;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.flez.bettervanilla.item.custom.AmethystShieldItem;
+import net.flez.bettervanilla.item.custom.BlazingArrowItem;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -60,6 +61,10 @@ public class ModItems {
                     .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(13))));
 
 
+    public static final Item BLAZING_ARROW = registerItem("blazing_arrow",
+            new BlazingArrowItem(new Item.Settings()));
+
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(BetterVanilla.MOD_ID, name), item);
 
@@ -67,6 +72,10 @@ public class ModItems {
 
     public static void registerModItems() {
         BetterVanilla.LOGGER.info("Registering items for " + BetterVanilla.MOD_ID);
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
+            entries.addAfter(Items.ARROW, ModItems.BLAZING_ARROW);
+        });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(COPPER_DUST);

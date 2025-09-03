@@ -24,6 +24,16 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+        getOrCreateTagBuilder(BlockTags.PLANKS)
+                .add(ModBlocks.PALM_PLANKS)
+                .add(ModBlocks.FIREPROOF_OAK_PLANKS)
+                .add(ModBlocks.FIREPROOF_SPRUCE_PLANKS)
+                .add(ModBlocks.FIREPROOF_DARK_OAK_PLANKS)
+                .add(ModBlocks.FIREPROOF_ACACIA_PLANKS)
+                .add(ModBlocks.FIREPROOF_JUNGLE_PLANKS)
+                .add(ModBlocks.FIREPROOF_MANGROVE_PLANKS)
+                .add(ModBlocks.FIREPROOF_BIRCH_PLANKS)
+                .add(ModBlocks.FIREPROOF_BAMBOO_PLANKS);
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.FIREPROOF_OAK_PLANKS)

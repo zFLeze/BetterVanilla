@@ -25,6 +25,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+        getOrCreateTagBuilder(ItemTags.ARROWS)
+                .add(ModItems.BLAZING_ARROW);
+
         getOrCreateTagBuilder(ItemTags.SWORDS)
                 .add(ModItems.COPPER_SWORD)
                 .add(ModItems.COPPER_AXE)

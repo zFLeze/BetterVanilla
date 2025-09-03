@@ -11,26 +11,17 @@
     "BounceSnowballMixin",
     "BounceSpectralArrowMixin",
     "BounceWindChargeMixin",
-    "ChangeStackabilityFunctionsMixin",
     "CreeperEntityMixin",
     "MobEntityAccessor",
     "SnowballDamageMixin",
-    "CactusBlockMixin",
     "FarmlandBlockMixin",
-    "BerryBushMixin",
     "ScreenHandlerMixin",
-    "CauldronBreakMixin",
-    "AnvilCrushDripleafMixin",
+    "FallingAnvilCrushDripleafMixin",
     "ReflectDamageMixin",
-    "RecoveryCompassUseMixin",
     "StoneCutterDamageMixin",
     "CampfireEntityDropMixin",
-    "DecreaseDurabilityOnRightClickMixin",
-    "SetDurabilityMixin",
-    "GrindstoneMixin",
     "WaterCauldronMixin",
-    "DamageEndermanInWaterCauldronMixin",
-    "StopUsingFunctionsMixin"
+    "DamageEndermanInWaterCauldronMixin"
   ],
   "injectors": {
     "defaultRequire": 1
