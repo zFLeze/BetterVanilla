@@ -212,6 +212,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.COPPER_LEGGINGS));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.COPPER_BOOTS));
 
-
+        itemModelGenerator.register(ModItems.BLAZING_ARROW, Models.GENERATED);
     }
 }

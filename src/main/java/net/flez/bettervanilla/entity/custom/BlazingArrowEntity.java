@@ -4,23 +4,23 @@ import net.flez.bettervanilla.entity.ModEntities;
 import net.flez.bettervanilla.item.ModItems;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.projectile.PersistentProjectileEntity;
+import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class BlazingArrowEntity extends PersistentProjectileEntity {
+public class BlazingArrowEntity extends ArrowEntity {
     public BlazingArrowEntity(EntityType<? extends BlazingArrowEntity> entityType, World world) {
         super(entityType, world);
     }
 
     public BlazingArrowEntity(World world, double x, double y, double z, ItemStack stack, @Nullable ItemStack shotFrom) {
-        super(ModEntities.BLAZING_ARROW_ENTITY, x, y, z, world, stack, shotFrom);
+        super(world, x, y, z, stack, shotFrom);
     }
 
     public BlazingArrowEntity(World world, LivingEntity owner, ItemStack stack, @Nullable ItemStack shotFrom) {
-        super(ModEntities.BLAZING_ARROW_ENTITY, owner, world, stack, shotFrom);
+        super(world, owner, stack, shotFrom);
     }
 
     @Override

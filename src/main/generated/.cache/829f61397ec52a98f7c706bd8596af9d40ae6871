@@ -1,11 +1,10 @@
-// 1.21.1	2025-08-02T10:09:09.0440951	Better Vanilla/Tags for minecraft:block
+// 1.21.1	2025-09-04T09:09:00.2707987	Better Vanilla/Tags for minecraft:block
 42c3a86cc1f3ebd1fb6e0e9ed558e3e50275ff31 data\minecraft\tags\block\walls.json
-f793d1f179ee9f8fe4874e60270bee9d90dabbcd data\bettervanilla\tags\block\sittable_stairs.json
 b239e7b03736ed687b12fa515c9a1139f07cc1a8 data\bettervanilla\tags\block\needs_copper_tool.json
 37daf5b099585de1002141757031973577ca11a7 data\bettervanilla\tags\block\creeper_avoidance.json
 8d2bdf61cfd92e50f2966f51553364ecc7b38abe data\minecraft\tags\block\fences.json
-eeb9d71d8a2b8bb8ffc9a103c4318009ca0c0350 data\minecraft\tags\block\fence_gates.json
 b2cf2ab0edfc6192e6d3ff177b46ecab35a7d94d data\minecraft\tags\block\mineable\pickaxe.json
+eeb9d71d8a2b8bb8ffc9a103c4318009ca0c0350 data\minecraft\tags\block\fence_gates.json
 5700695afb31d5a7dc1ded051238165f421d8b10 data\bettervanilla\tags\block\crafting_tables.json
 ed7a79db00ee0427eeb410f44b5db1fe73778db4 data\minecraft\tags\block\mineable\axe.json
-86380a634a831de014ca495d388f85ec5b927a20 data\bettervanilla\tags\block\sittable_logs.json
+3d7b06c5e8f7a6585e2ea5b28bfd729888b35fb2 data\minecraft\tags\block\planks.json

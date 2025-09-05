@@ -1,22 +1,89 @@
-[10:38:56] [main/INFO]: Loading Minecraft 1.21.1 with Fabric Loader 0.16.14
-[10:38:57] [main/INFO]: Fabric is preparing JARs on first launch, this may take a few seconds...
-[10:38:58] [main/INFO]: Loading 4 mods:
+[09:08:22] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21.1 with Fabric Loader 0.16.14
+[09:08:23] [main/INFO] (FabricLoader) Loading 55 mods:
+	- bettervanilla 1.0.0
+	- fabric-api 0.116.2+1.21.1
+	- fabric-api-base 0.4.42+6573ed8c19
+	- fabric-api-lookup-api-v1 1.6.71+b559734419
+	- fabric-biome-api-v1 13.0.31+d527f9fd19
+	- fabric-block-api-v1 1.1.0+0bc3503219
+	- fabric-block-view-api-v2 1.0.11+ebb2264e19
+	- fabric-blockrenderlayer-v1 1.1.52+0af3f5a719
+	- fabric-client-tags-api-v1 1.1.15+6573ed8c19
+	- fabric-command-api-v1 1.2.49+f71b366f19
+	- fabric-command-api-v2 2.2.28+6ced4dd919
+	- fabric-commands-v0 0.2.66+df3654b319
+	- fabric-content-registries-v0 8.0.19+b559734419
+	- fabric-convention-tags-v1 2.1.5+7f945d5b19
+	- fabric-convention-tags-v2 2.11.1+a406e79519
+	- fabric-crash-report-info-v1 0.2.29+0af3f5a719
+	- fabric-data-attachment-api-v1 1.4.5+6116a37819
+	- fabric-data-generation-api-v1 20.2.30+16c4ae2519
+	- fabric-dimensions-v1 4.0.0+6fc22b9919
+	- fabric-entity-events-v1 1.8.0+2b27e0a419
+	- fabric-events-interaction-v0 0.7.13+ba9dae0619
+	- fabric-game-rule-api-v1 1.0.53+6ced4dd919
+	- fabric-gametest-api-v1 2.0.5+6fc22b9919
+	- fabric-item-api-v1 11.1.1+d5debaed19
+	- fabric-item-group-api-v1 4.1.7+def88e3a19
+	- fabric-key-binding-api-v1 1.0.47+0af3f5a719
+	- fabric-keybindings-v0 0.2.45+df3654b319
+	- fabric-lifecycle-events-v1 2.6.0+0865547519
+	- fabric-loot-api-v2 3.0.15+3f89f5a519
+	- fabric-loot-api-v3 1.0.3+3f89f5a519
+	- fabric-message-api-v1 6.0.14+8aaf3aca19
+	- fabric-model-loading-api-v1 2.0.0+fe474d6b19
+	- fabric-networking-api-v1 4.3.0+c7469b2119
+	- fabric-object-builder-api-v1 15.2.1+40875a9319
+	- fabric-particles-v1 4.0.2+6573ed8c19
+	- fabric-recipe-api-v1 5.0.14+248df81c19
+	- fabric-registry-sync-v0 5.3.0+b7e751e819
+	- fabric-renderer-api-v1 3.4.0+c705a49c19
+	- fabric-renderer-indigo 1.7.0+c705a49c19
+	- fabric-renderer-registries-v1 3.2.68+df3654b319
+	- fabric-rendering-data-attachment-v1 0.3.49+73761d2e19
+	- fabric-rendering-fluids-v1 3.1.6+1daea21519
+	- fabric-rendering-v0 1.1.71+df3654b319
+	- fabric-rendering-v1 5.0.5+df16efd019
+	- fabric-resource-conditions-api-v1 4.3.0+8dc279b119
+	- fabric-resource-loader-v0 1.3.1+5b5275af19
+	- fabric-screen-api-v1 2.0.25+8b68f1c719
+	- fabric-screen-handler-api-v1 1.3.89+b559734419
+	- fabric-sound-api-v1 1.0.23+6573ed8c19
+	- fabric-transfer-api-v1 5.4.3+c24bd99419
+	- fabric-transitive-access-wideners-v1 6.2.0+45b9699719
 	- fabricloader 0.16.14
-	   \-- mixinextras 0.4.1
 	- java 21
 	- minecraft 1.21.1
-[10:38:59] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/Admin/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.5+mixin.0.8.7/22f9eb729e216a091673a574a5906dc1b9027fb3/sponge-mixin-0.15.5+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
-[10:39:14] [Datafixer Bootstrap/INFO]: 226 Datafixer optimizations took 967 milliseconds
-[10:39:36] [main/WARN]: Failed to get system info for GL Caps
-java.lang.IllegalStateException: Rendersystem called from wrong thread
-	at knot/com.mojang.blaze3d.systems.RenderSystem.constructThreadException(RenderSystem.java:124) ~[client-intermediary.jar:?]
-	at knot/com.mojang.blaze3d.systems.RenderSystem.assertOnRenderThread(RenderSystem.java:119) ~[client-intermediary.jar:?]
-	at knot/com.mojang.blaze3d.systems.RenderSystem.getCapsString(RenderSystem.java:497) ~[client-intermediary.jar:?]
-	at knot/net.minecraft.util.SystemDetails.addSection(SystemDetails.java:85) [client-intermediary.jar:?]
-	at knot/net.minecraft.client.MinecraftClient.addSystemDetailsToCrashReport(MinecraftClient.java:2507) [client-intermediary.jar:?]
-	at knot/net.minecraft.client.MinecraftClient.addSystemDetailsToCrashReport(MinecraftClient.java:2477) [client-intermediary.jar:?]
-	at knot/net.minecraft.client.main.Main.main(Main.java:188) [client-intermediary.jar:?]
-	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480) [fabric-loader-0.16.14.jar:?]
-	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74) [fabric-loader-0.16.14.jar:?]
-	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.16.14.jar:?]
-	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) [dev-launch-injector-0.2.1+build.8.jar:?]
+	- mixinextras 0.4.1
+[09:08:24] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/Admin/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.5+mixin.0.8.7/22f9eb729e216a091673a574a5906dc1b9027fb3/sponge-mixin-0.15.5+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[09:08:24] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[09:08:25] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[09:08:25] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
+[09:08:33] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[09:08:36] [Datafixer Bootstrap/INFO] (Minecraft) 226 Datafixer optimizations took 1175 milliseconds
+[09:08:54] [Render thread/INFO] (Minecraft) Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[09:08:54] [Render thread/INFO] (Minecraft) Setting user: Player597
+[09:08:55] [Render thread/INFO] (bettervanilla) Registering items for bettervanilla
+[09:08:55] [Render thread/INFO] (bettervanilla) Registering blocks for bettervanilla
+[09:08:55] [Render thread/INFO] (bettervanilla) Registering Item groups for bettervanilla
+[09:08:55] [Render thread/INFO] (bettervanilla) Registering Block Entities for bettervanilla
+[09:08:55] [Render thread/INFO] (bettervanilla) Registering Screen Handlers for bettervanilla
+[09:08:55] [Render thread/INFO] (bettervanilla) Registering Block Entities for bettervanilla
+[09:08:55] [Render thread/INFO] (bettervanilla) Registering Data Components for bettervanilla
+[09:08:55] [Render thread/INFO] (bettervanilla) Registering Entites for bettervanilla
+[09:08:56] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
+[09:08:58] [Render thread/INFO] (FabricDataGenHelper) Running data generator for bettervanilla
+[09:08:59] [Render thread/INFO] (Minecraft) Starting provider: Better Vanilla/Tags for minecraft:block
+[09:08:59] [Render thread/INFO] (Minecraft) Better Vanilla/Tags for minecraft:block finished after 37 ms
+[09:08:59] [Render thread/INFO] (Minecraft) Starting provider: Better Vanilla/Tags for minecraft:item
+[09:08:59] [Render thread/INFO] (Minecraft) Better Vanilla/Tags for minecraft:item finished after 2 ms
+[09:08:59] [Render thread/INFO] (Minecraft) Starting provider: Better Vanilla/Block Loot Tables
+[09:08:59] [Render thread/INFO] (Minecraft) Better Vanilla/Block Loot Tables finished after 86 ms
+[09:08:59] [Render thread/INFO] (Minecraft) Starting provider: Better Vanilla/Model Definitions
+[09:08:59] [Render thread/INFO] (Minecraft) Better Vanilla/Model Definitions finished after 231 ms
+[09:08:59] [Render thread/INFO] (Minecraft) Starting provider: Better Vanilla/Recipes
+[09:09:00] [Render thread/INFO] (Minecraft) Better Vanilla/Recipes finished after 328 ms
+[09:09:00] [Render thread/INFO] (Minecraft) Starting provider: Better Vanilla/
+[09:09:00] [Render thread/INFO] (Minecraft) Better Vanilla/ finished after 9 ms
+[09:09:00] [Render thread/INFO] (Minecraft) All providers took: 700 ms
+[09:09:00] [Render thread/INFO] (Minecraft) Caching: total files: 996, old count: 996, new count: 997, removed stale: 0, written: 0

@@ -166,6 +166,8 @@
   "item.bettervanilla.copper_leggings": "Copper Leggings",
   "item.bettervanilla.copper_boots": "Copper Boots",
 
+  "item.bettervanilla.blazing_arrow": "Blazing Arrow",
+
   "gamerule.loseVelocityOnBounce": "loseVelocityOnBounce",
   "death.attack.stonecutter": "%1$s was sliced by a stonecutter"
 }

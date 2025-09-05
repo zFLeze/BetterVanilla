@@ -6,18 +6,19 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents;
 import net.flez.bettervanilla.block.ModBlocks;
 import net.flez.bettervanilla.entity.ModEntities;
+import net.flez.bettervanilla.entity.client.BlazingArrowEntityRenderer;
 import net.flez.bettervanilla.entity.client.SitEntityRenderer;
 import net.flez.bettervanilla.util.ModModelPredicates;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.ArrowEntityRenderer;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.Items;
 
 public class BetterVanillaClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+        BlazingArrowEntityRenderer.registerModArrows();
         EntityRendererRegistry.register(ModEntities.SIT_ENTITY, SitEntityRenderer::new);
-        EntityRendererRegistry.register(ModEntities.BLAZING_ARROW_ENTITY, (ctx) -> new ArrowEntityRenderer<>(ctx));
+        EntityRendererRegistry.register(ModEntities.BLAZING_ARROW_ENTITY, BlazingArrowEntityRenderer::new);
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AMETHYST_TRAPDOOR, RenderLayer.getCutout());
         ModModelPredicates.registerModelPredicates();
         DefaultItemComponentEvents.MODIFY.register(modifyContext ->

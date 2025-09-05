@@ -1,6 +1,7 @@
-// 1.21.1	2025-08-02T10:09:09.0320978	Better Vanilla/Tags for minecraft:item
+// 1.21.1	2025-09-04T09:09:00.2568068	Better Vanilla/Tags for minecraft:item
 68d7aa43c115f1141edcca31644e728da18eec53 data\minecraft\tags\item\trimmable_armor.json
 68d7aa43c115f1141edcca31644e728da18eec53 data\bettervanilla\tags\item\copper_armor.json
 68d7aa43c115f1141edcca31644e728da18eec53 data\minecraft\tags\item\enchantable\armor.json
-f9a4be6d47f26c9df5e3b3a7545e68318fc45107 data\minecraft\tags\item\swords.json
+0324faf39030c8baf09f5bea4abd1efe5bf3b8ad data\minecraft\tags\item\arrows.json
 9ff104e70db55f42999ea60ea892cc92b4f770f3 data\bettervanilla\tags\item\copper_tools.json
+f9a4be6d47f26c9df5e3b3a7545e68318fc45107 data\minecraft\tags\item\swords.json

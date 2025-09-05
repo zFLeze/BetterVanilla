@@ -6,6 +6,7 @@ import net.flez.bettervanilla.block.ModBlocks;
 import net.flez.bettervanilla.block.entity.ModBlockEntities;
 import net.flez.bettervanilla.datacomponents.ModDataComponents;
 import net.flez.bettervanilla.entity.ModEntities;
+import net.flez.bettervanilla.entity.client.BlazingArrowEntityRenderer;
 import net.flez.bettervanilla.event.ModEvents;
 import net.flez.bettervanilla.item.ModItemGroups;
 import net.flez.bettervanilla.item.ModItems;

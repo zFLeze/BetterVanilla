@@ -114,9 +114,7 @@ public class ModEvents {
         UseItemCallback.EVENT.register((player, world, hand) -> {
             ItemStack stack = player.getStackInHand(hand);
             EquipmentSlot slot = (hand == Hand.MAIN_HAND) ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND;
-            BetterVanilla.LOGGER.info("CALLED!");
             if (!world.isClient && stack.isOf(Items.RECOVERY_COMPASS) && player.getLastDeathPos().isPresent()) {
-                BetterVanilla.LOGGER.info("CALLED!");
                 player.getItemCooldownManager().set(stack.getItem(), 100);
                 BlockPos deathPos = player.getLastDeathPos().get().pos();
 

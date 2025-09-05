@@ -23,11 +23,13 @@ public class ModEntities {
     public static final EntityType<BlazingArrowEntity> BLAZING_ARROW_ENTITY =
             Registry.register(Registries.ENTITY_TYPE,
                     Identifier.of(BetterVanilla.MOD_ID, "blazing_arrow_entity"),
-                    EntityType.Builder.create(BlazingArrowEntity::new, SpawnGroup.MISC)
+                    EntityType.Builder.<BlazingArrowEntity>create(BlazingArrowEntity::new, SpawnGroup.MISC)
                             .dimensions(0.5F, 0.5F)
                             .maxTrackingRange(4)
                             .trackingTickInterval(20)
-                            .build());
+                            .build()
+            );
+
 
     public static void registerModEntites() {
         BetterVanilla.LOGGER.info("Registering Entites for " + BetterVanilla.MOD_ID);

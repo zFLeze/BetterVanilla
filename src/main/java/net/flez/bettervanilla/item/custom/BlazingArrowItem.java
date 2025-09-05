@@ -20,14 +20,13 @@ public class BlazingArrowItem extends ArrowItem {
 
     @Override
     public PersistentProjectileEntity createArrow(World world, ItemStack stack, LivingEntity shooter, @Nullable ItemStack shotFrom) {
-        BlazingArrowEntity arrow = new BlazingArrowEntity(ModEntities.BLAZING_ARROW_ENTITY, world);
-        arrow.setOnFireFor(5);
-        return arrow;
+        return new BlazingArrowEntity(world, shooter, stack.copyWithCount(1), shotFrom);
     }
-
 
     @Override
     public ProjectileEntity createEntity(World world, Position pos, ItemStack stack, Direction direction) {
-        return super.createEntity(world, pos, stack, direction);
+        BlazingArrowEntity arrow = new BlazingArrowEntity(world, pos.getX(), pos.getY(), pos.getZ(), stack.copyWithCount(1), null);
+        arrow.pickupType = PersistentProjectileEntity.PickupPermission.ALLOWED;
+        return arrow;
     }
 }
